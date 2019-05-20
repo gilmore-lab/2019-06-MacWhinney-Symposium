@@ -1,0 +1,55 @@
+---
+title: "Open by Design"
+author: Rick O. Gilmore & Karen E. Adolph
+date: "`r Sys.time()`"
+bib: references.bib
+output:
+  revealjs::revealjs_presentation:
+    css: styles.css
+    self_contained: false
+    lib_dir: libs
+    incremental: false
+    theme: simple
+    transition: none
+    reveal_plugins: ["notes", "zoom"]
+    reveal_options:
+      slideNumber: true
+      previewLinks: false
+      center: true
+      touch: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Preliminaries
+
+---
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/87/NSF_Logo.PNG" height=150px>
+<img src="https://science.nichd.nih.gov/confluence/download/attachments/34472103/NICHD-vertical-2-color.png?version=1&modificationDate=1477410070000&api=v2" height=150px>
+</br>
+<img src="https://sloan.org/storage/app/media/Logos/Sloan-Logo-stacked-black-web.png" height=150px>
+<img src="http://newsroom.unl.edu/announce/files/file77330.jpg" height=150px/>
+<img src="https://www.unicef.org.hk/wp-content/uploads/2017/08/Logo-05_Lego-foundation_UNICEF_partnership.jpg" height=150px />
+</br>
+<img src="https://nationalpress.org/wp-content/uploads/2016/04/NIDA-logo-300x300.jpg" height=150px/>
+<img src="http://bewellva.com/wp-content/uploads/2017/12/NIMH-Logo_14-e1510955490255.jpg" height=150px/>
+
+<!-- Funding sources with icons -->
+
+## Overview
+
+# Thank you
+
+---
+
+<img src="https://nyu.databrary.org/web/images/logo/databrary-nav.svg" height=250px>
+
+---
+
+rogilmore@psu.edu</br>
+
+<https://gilmore-lab.github.io/2019-06-MacWhinney-Symposium/databrary-workshop/>
+
