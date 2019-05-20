@@ -380,7 +380,7 @@ write_video_clip_html("https://nyu.databrary.org/slot/27087/0,372193/asset/11987
 
 ## Register for Databrary access
 
-## Download and test the `databraryapi` package
+## Download and test the [*databraryapi*] package
 
 ## Secure permission to share from research participants
 
