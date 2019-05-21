@@ -22,6 +22,19 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 source('R/write_video_clip_html.R')
+
+if(!require(databraryapi)){
+  if(!require(devtools)){
+    install.packages('devtools')
+  }
+  devtools::install_github('PLAY-behaviorome/databraryapi')
+}
+library(databraryapi)
+
+if(!require(tidyverse)){
+  install.packages('tidyverse')
+}
+library(tidyverse)
 ```
 
 ---
@@ -376,11 +389,202 @@ write_video_clip_html("https://nyu.databrary.org/slot/27087/0,372193/asset/11987
 
 ## Platforms for discovery
 
+---
+
+<iframe src="https://nyu.databrary.org/volume/8" height=600 width=1000>
+</iframe>
+
+[Tamis-LeMonda 2013](http://doi.org/10.17910/B7CC74)
+
+---
+
+```{r, include=TRUE}
+vol_8 <- databraryapi::download_session_csv(vol_id = 8)
+```
+
+---
+
+```{r, include=TRUE}
+xtabs(formula = ~ participant.gender + participant.race, data = vol_8) %>%
+  knitr::kable(.)
+```
+
+---
+
+```{r, include=TRUE}
+vol_8 %>%
+  filter(participant.gender %in% c('Male', 'Female')) %>%
+  ggplot() +
+  aes(x = participant.race, fill = participant.race) +
+  facet_grid(. ~ participant.gender) +
+  geom_bar(stat="count") +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+```
+
+---
+
+```
+databraryapi::login_db(email = "rogilmore@psu.edu")
+
+play_session_id <- 26295
+play_vol_id <- 444
+
+list_assets_in_session(vol_id = play_vol_id, session_id = play_session_id) %>%
+  select(name, asset_type, asset_id) %>%
+  knitr::kable()
+```
+
+---
+
+```{r}
+databraryapi::login_db(email = "rogilmore@psu.edu")
+
+play_session_id <- 26295
+play_vol_id <- 444
+
+list_assets_in_session(vol_id = play_vol_id, session_id = play_session_id) %>%
+  select(name, asset_type, asset_id) %>%
+  knitr::kable()
+```
+
+---
+
+```
+# Load language exposure data
+lang_exp <- databraryapi::read_csv_data_as_df(session_id = play_session_id, 
+                                              asset_id = 116787)
+# Plot
+lang_exp %>%
+  ggplot(.) +
+  aes(x = language, fill = language) +
+  facet_grid(exposure_context ~ .) +
+  geom_histogram(stat='count')
+```
+
+---
+
+```{r}
+lang_exp <- databraryapi::read_csv_data_as_df(session_id = play_session_id, 
+                                              asset_id = 116787)
+
+lang_exp %>%
+  ggplot(.) +
+  aes(x = language, fill = language) +
+  facet_grid(exposure_context ~ .) +
+  geom_histogram(stat='count')
+```
+
+---
+
+```
+vol_254_assets <- list_assets_in_session(254, 14514)
+vol_254_assets %>%
+  filter(mimetype %in% c('video/mp4', 'application/vnd.datavyu')) %>%
+  select(name, asset_type)
+```
+---
+
+```{r}
+vol_254_assets <- list_assets_in_session(254, 14514)
+vol_254_assets %>%
+  filter(mimetype %in% c('video/mp4', 'application/vnd.datavyu')) %>%
+  select(name, asset_type)
+```
+
+---
+
+```
+# Pick Datavyu file and download
+dv_info <- filter(vol_254_assets, asset_type == "Datavyu")
+dv_dir <- databraryapi::download_datavyu(vol_id = dv_info$vol_id, 
+    session_id = dv_info$session_id, 
+    asset_id = dv_info$asset_id)
+
+# Convert to CSV
+databraryapi::extract_dv(in_dir = dv_dir, auto_write_over = TRUE)
+databraryapi::dv_to_csv(dv_dir)
+
+# Load CSV and print out
+dv_fn <- list.files(dv_dir, '\\.csv$', full.names = TRUE)
+(vol_254_14514_dv <- read_csv(dv_fn))
+```
+
+---
+
+```{r echo=TRUE}
+# Delete tmp directory
+unlink('tmp', recursive = TRUE)
+
+# Pick Datavyu file and download
+dv_info <- filter(vol_254_assets, asset_type == "Datavyu")
+dv_dir <- databraryapi::download_datavyu(vol_id = dv_info$vol_id, 
+    session_id = dv_info$session_id, 
+    asset_id = dv_info$asset_id)
+
+# Convert to CSV
+databraryapi::extract_dv(in_dir = dv_dir, auto_write_over = TRUE)
+databraryapi::dv_to_csv(dv_dir)
+
+# Load CSV and print out
+dv_fn <- list.files(dv_dir, '\\.csv$', full.names = TRUE)
+(vol_254_14514_dv <- read_csv(dv_fn))
+```
+
+---
+
+```{r}
+(babyloc <- filter(vol_254_14514_dv, code == 'babyloc'))
+```
+
+---
+
+```{r}
+unique(babyloc$code.value) 
+```
+
+---
+
+```{r}
+(babyloc_segs <- dplyr::filter(babyloc, code.value == 'h'))
+```
+
+---
+
+```{r}
+this_seg <- 1
+seg_range <- databraryapi::get_asset_segment_range(vol_id = 254, session_id = 14514, asset_id = 61054)
+
+onset_ms <- as.integer(lubridate::seconds(babyloc$onset)*1000) + seg_range[1] 
+offset_ms <- as.integer(lubridate::seconds(babyloc$offset)*1000) + seg_range[1] 
+
+selected_seg <- paste0(onset_ms, ",", offset_ms)
+message(paste0('Picking segment ', selected_seg, '.'))
+```
+
+---
+
+```{r}
+write_video_clip_html('https://nyu.databrary.org/slot/14514/71873879,71875206/asset/61054/download?inline=true', vid_w_pix = 480, vid_h_pix = 320, show_link = FALSE)
+```
+
+<small>
+https://nyu.databrary.org/slot/14514/71873879,71875206/asset/61054/download?inline=true
+</small>
+
+## Prepare your video + other data for sharing
+
+- Conduct scripted, reproducible visualizations & analyses
+
+## Shared video data & documentation will
+
+- Make the behavioral sciences more robust & reproducible
+- Accelerate discovery
+
 # Next steps...
 
 ## Register for Databrary access
 
-## Download and test the [*databraryapi*] package
+## Download, test, and help me improve the [*databraryapi*](https://github.com/PLAY-behaviorome/databraryapi) package
 
 ## Secure permission to share from research participants
 

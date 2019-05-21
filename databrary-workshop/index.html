@@ -11,6 +11,43 @@
   <link rel="stylesheet" href="libs/reveal.js-3.3.0.1/css/reveal.css"/>
 
 
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
 
 <link rel="stylesheet" href="libs/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
 
@@ -452,7 +489,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <section>
     <h1 class="title">Video as Data &amp; Documentation</h1>
     <h2 class="author">Rick O. Gilmore</h2>
-    <h3 class="date">2019-05-20 13:49:20</h3>
+    <h3 class="date">2019-05-21 11:49:13</h3>
 </section>
 
 <section class="slide level2">
@@ -680,15 +717,217 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </iframe>
 </section><section id="platforms-for-discovery" class="slide level2">
 <h2>Platforms for discovery</h2>
+</section><section class="slide level2">
+
+<iframe src="https://nyu.databrary.org/volume/8" height="600" width="1000">
+</iframe>
+<p><a href="http://doi.org/10.17910/B7CC74">Tamis-LeMonda 2013</a></p>
+</section><section class="slide level2">
+
+</section><section class="slide level2">
+
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th></th>
+<th style="text-align: right;">Asian</th>
+<th style="text-align: right;">Black or African American</th>
+<th style="text-align: right;">Unknown or not reported</th>
+<th style="text-align: right;">White</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>7</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td>Female</td>
+<td>0</td>
+<td style="text-align: right;">112</td>
+<td style="text-align: right;">341</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">209</td>
+</tr>
+<tr class="odd">
+<td>Male</td>
+<td>0</td>
+<td style="text-align: right;">111</td>
+<td style="text-align: right;">410</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">155</td>
+</tr>
+</tbody>
+</table>
+</section><section class="slide level2">
+
+<p><img src="index_files/figure-revealjs/unnamed-chunk-13-1.png" width="768" /></p>
+</section><section class="slide level2">
+
+<pre><code>databraryapi::login_db(email = &quot;rogilmore@psu.edu&quot;)
+
+play_session_id &lt;- 26295
+play_vol_id &lt;- 444
+
+list_assets_in_session(vol_id = play_vol_id, session_id = play_session_id) %&gt;%
+  select(name, asset_type, asset_id) %&gt;%
+  knitr::kable()</code></pre>
+</section><section class="slide level2">
+
+<pre><code>## Login successful.</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">name</th>
+<th style="text-align: left;">asset_type</th>
+<th style="text-align: right;">asset_id</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">childcare</td>
+<td style="text-align: left;">Comma-separated values</td>
+<td style="text-align: right;">159177</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">locomotion</td>
+<td style="text-align: left;">Comma-separated values</td>
+<td style="text-align: right;">117092</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">child-birth</td>
+<td style="text-align: left;">Comma-separated values</td>
+<td style="text-align: right;">116791</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">family</td>
+<td style="text-align: left;">Comma-separated values</td>
+<td style="text-align: right;">116790</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">sleep</td>
+<td style="text-align: left;">Comma-separated values</td>
+<td style="text-align: right;">116789</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">language-exposure</td>
+<td style="text-align: left;">Comma-separated values</td>
+<td style="text-align: right;">116787</td>
+</tr>
+</tbody>
+</table>
+</section><section class="slide level2">
+
+<pre><code># Load language exposure data
+lang_exp &lt;- databraryapi::read_csv_data_as_df(session_id = play_session_id, 
+                                              asset_id = 116787)
+# Plot
+lang_exp %&gt;%
+  ggplot(.) +
+  aes(x = language, fill = language) +
+  facet_grid(exposure_context ~ .) +
+  geom_histogram(stat=&#39;count&#39;)</code></pre>
+</section><section class="slide level2">
+
+<pre><code>## Warning: Ignoring unknown parameters: binwidth, bins, pad</code></pre>
+<p><img src="index_files/figure-revealjs/unnamed-chunk-15-1.png" width="768" /></p>
+</section><section class="slide level2">
+
+<pre><code>vol_254_assets &lt;- list_assets_in_session(254, 14514)
+vol_254_assets %&gt;%
+  filter(mimetype %in% c(&#39;video/mp4&#39;, &#39;application/vnd.datavyu&#39;)) %&gt;%
+  select(name, asset_type)</code></pre>
+</section><section class="slide level2">
+
+<pre><code>##                                                         name   asset_type
+## 1                                                     NYU019      Datavyu
+## 2                                 NYU019_Phone Questionnaire MPEG-4 video
+## 3                                    NYU019_1-Hour Free Play MPEG-4 video
+## 4             NYU019_1-Hour Free Play (View of Experimenter) MPEG-4 video
+## 5                                       NYU019_Solitary Play MPEG-4 video
+## 6                                         NYU019_Dyadic Play MPEG-4 video
+## 7  NYU019_Solitary Play &amp; Dyadic Play (View of Experimenter) MPEG-4 video
+## 8       NYU019_At-Home Questionnaires (View of Experimenter) MPEG-4 video
+## 9                                   NYU019_House Walkthrough MPEG-4 video
+## 10           NYU019_House Walkthrough (View of Experimenter) MPEG-4 video</code></pre>
+</section><section class="slide level2">
+
+<pre><code># Pick Datavyu file and download
+dv_info &lt;- filter(vol_254_assets, asset_type == &quot;Datavyu&quot;)
+dv_dir &lt;- databraryapi::download_datavyu(vol_id = dv_info$vol_id, 
+    session_id = dv_info$session_id, 
+    asset_id = dv_info$asset_id)
+
+# Convert to CSV
+databraryapi::extract_dv(in_dir = dv_dir, auto_write_over = TRUE)
+databraryapi::dv_to_csv(dv_dir)
+
+# Load CSV and print out
+dv_fn &lt;- list.files(dv_dir, &#39;\\.csv$&#39;, full.names = TRUE)
+(vol_254_14514_dv &lt;- read_csv(dv_fn))</code></pre>
+</section><section class="slide level2">
+
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Pick Datavyu file and download</span>
+dv_info &lt;-<span class="st"> </span><span class="kw">filter</span>(vol_254_assets, asset_type <span class="op">==</span><span class="st"> &quot;Datavyu&quot;</span>)
+dv_dir &lt;-<span class="st"> </span>databraryapi<span class="op">::</span><span class="kw">download_datavyu</span>(<span class="dt">vol_id =</span> dv_info<span class="op">$</span>vol_id, 
+    <span class="dt">session_id =</span> dv_info<span class="op">$</span>session_id, 
+    <span class="dt">asset_id =</span> dv_info<span class="op">$</span>asset_id)</code></pre></div>
+<pre><code>## Creating directory tmp/</code></pre>
+<pre><code>## Successful HTML GET query.</code></pre>
+<pre><code>## Content-type is application/vnd.datavyu</code></pre>
+<pre><code>## File name unspecified. Generating unique name.</code></pre>
+<pre><code>## Downloading Datavyu file as: 
+## tmp/254-14514-63635-2019-05-21-1150-15.opf</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Convert to CSV</span>
+databraryapi<span class="op">::</span><span class="kw">extract_dv</span>(<span class="dt">in_dir =</span> dv_dir, <span class="dt">auto_write_over =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<pre><code>## [1] &quot;tmp&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">databraryapi<span class="op">::</span><span class="kw">dv_to_csv</span>(dv_dir)</code></pre></div>
+<pre><code>## [1] &quot;tmp/254-14514-63635-2019-05-21-1150-15.csv&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Load CSV and print out</span>
+dv_fn &lt;-<span class="st"> </span><span class="kw">list.files</span>(dv_dir, <span class="st">&#39;</span><span class="ch">\\</span><span class="st">.csv$&#39;</span>, <span class="dt">full.names =</span> <span class="ot">TRUE</span>)
+(vol_254_14514_dv &lt;-<span class="st"> </span><span class="kw">read_csv</span>(dv_fn))</code></pre></div>
+<pre><code>## Parsed with column specification:
+## cols(
+##   code = col_character(),
+##   onset = col_time(format = &quot;&quot;),
+##   offset = col_time(format = &quot;&quot;),
+##   code.value = col_character()
+## )</code></pre>
+<pre><code>## # A tibble: 6,145 x 4
+##    code       onset  offset code.value                   
+##    &lt;chr&gt;      &lt;time&gt; &lt;time&gt; &lt;chr&gt;                        
+##  1 transcribe 00&#39;03&quot; 00&#39;03&quot; m,hi                         
+##  2 transcribe 00&#39;06&quot; 00&#39;07&quot; m,you have to keep that on   
+##  3 transcribe 00&#39;07&quot; 00&#39;08&quot; m,ok?                        
+##  4 transcribe 00&#39;09&quot; 00&#39;10&quot; m,you wanna play with mickey?
+##  5 transcribe 00&#39;18&quot; 00&#39;19&quot; b,what                       
+##  6 transcribe 00&#39;20&quot; 00&#39;20&quot; b,b                          
+##  7 transcribe 00&#39;22&quot; 00&#39;23&quot; b,b                          
+##  8 transcribe 00&#39;23&quot; 00&#39;24&quot; b,b                          
+##  9 transcribe 00&#39;24&quot; 00&#39;25&quot; m,thats not mickey           
+## 10 transcribe 00&#39;25&quot; 00&#39;26&quot; m,wheres mickey?             
+## # … with 6,135 more rows</code></pre>
 </section></section>
 <section><section id="next-steps" class="titleslide slide level1"><h1>Next steps…</h1></section><section id="register-for-databrary-access" class="slide level2">
 <h2>Register for Databrary access</h2>
-</section><section id="download-and-test-the-databraryapi-package" class="slide level2">
-<h2>Download and test the [<em>databraryapi</em>] package</h2>
+</section><section id="download-test-and-help-me-improve-the-databraryapi-package" class="slide level2">
+<h2>Download, test, and help me improve the [<em>databraryapi</em>] package</h2>
 </section><section id="secure-permission-to-share-from-research-participants" class="slide level2">
 <h2>Secure permission to share from research participants</h2>
 </section><section id="collect-upload-share-video-and-audio-recordings" class="slide level2">
 <h2>Collect, upload, &amp; share video and audio recordings</h2>
+</section><section id="shared-video-data-documentation-will" class="slide level2">
+<h2>Shared video data &amp; documentation will</h2>
+<ul>
+<li>Make the behavioral sciences more robust &amp; reproducible</li>
+<li>Accelerate discovery</li>
+</ul>
 </section></section>
 <section><section id="thank-you" class="titleslide slide level1"><h1>Thank you</h1></section><section class="slide level2">
 
