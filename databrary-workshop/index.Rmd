@@ -19,7 +19,7 @@ output:
       touch: true
 ---
 
-```{r setup, include=FALSE}
+```{r setup, cache=TRUE, echo=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 source('R/write_video_clip_html.R')
 
@@ -47,7 +47,7 @@ library(tidyverse)
 ---
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/NSF_Logo.PNG" height=150px>
-<img src="https://science.nichd.nih.gov/confluence/download/attachments/34472103/NICHD-vertical-2-color.png?version=1&modificationDate=1477410070000&api=v2" height=150px>
+<img src="https://pbs.twimg.com/profile_images/826768222363975680/8hO9VaFD.jpg" height=150px>
 </br>
 <img src="https://sloan.org/storage/app/media/Logos/Sloan-Logo-stacked-black-web.png" height=150px>
 <img src="http://newsroom.unl.edu/announce/files/file77330.jpg" height=150px/>
@@ -55,6 +55,7 @@ library(tidyverse)
 </br>
 <img src="https://nationalpress.org/wp-content/uploads/2016/04/NIDA-logo-300x300.jpg" height=150px/>
 <img src="http://bewellva.com/wp-content/uploads/2017/12/NIMH-Logo_14-e1510955490255.jpg" height=150px/>
+<img src="https://www.jsmf.org/assets/logo-small.png" height=150px/>
 
 <!-- Funding sources with icons -->
 
@@ -79,9 +80,8 @@ library(tidyverse)
 
 ---
 
-```{r results='asis'}
-write_video_clip_html('https://nyu.databrary.org/slot/9840/-/asset/11192/download?inline=true', 
-                      vid_w_pix = 640, vid_h_pix = 480, show_link = FALSE)
+```{r, results='asis', echo=FALSE}
+write_video_clip_html('https://nyu.databrary.org/slot/9840/-/asset/11192/download?inline=true', vid_w_pix = 640, vid_h_pix = 480, show_link = FALSE)
 ```
 
 <small>
@@ -92,9 +92,8 @@ write_video_clip_html('https://nyu.databrary.org/slot/9840/-/asset/11192/downloa
 
 ---
 
-```{r results='asis'}
-write_video_clip_html('https://nyu.databrary.org/slot/9840/-/asset/11193/download?inline=true', 
-                      vid_w_pix = 640, vid_h_pix = 480, show_link = FALSE)
+```{r, results='asis', echo=FALSE}
+write_video_clip_html('https://nyu.databrary.org/slot/9840/-/asset/11193/download?inline=true', vid_w_pix = 640, vid_h_pix = 480, show_link = FALSE)
 ```
 
 <small>
@@ -123,7 +122,7 @@ write_video_clip_html('https://nyu.databrary.org/slot/9840/-/asset/11193/downloa
 
 ---
 
-```{r, results='asis'}
+```{r, results='asis', echo=FALSE}
 write_video_clip_html('https://nyu.databrary.org/slot/6785/3117000,7177732/asset/12753/download?inline=true', 
                       vid_w_pix = 640, vid_h_pix = 480, show_link = FALSE)
 ```
@@ -134,7 +133,7 @@ write_video_clip_html('https://nyu.databrary.org/slot/6785/3117000,7177732/asset
 
 ---
 
-<img src="img/demuth-vol-90-permission.jpg"/>
+<img src="img/demuth-vol-90-permission.jpg" width=800px/>
 
 <small>
 [Demuth 2014](http://doi.org/10.17910/B7B885)
@@ -142,7 +141,7 @@ write_video_clip_html('https://nyu.databrary.org/slot/6785/3117000,7177732/asset
 
 ---
 
-<img src="img/demuth-vol-90-participants.jpg"/>
+<img src="img/demuth-vol-90-participants.jpg" width=800px/>
 
 <small>
 [Demuth 2014](http://doi.org/10.17910/B7B885)
@@ -160,7 +159,7 @@ write_video_clip_html('https://nyu.databrary.org/slot/6785/3117000,7177732/asset
 
 ---
 
-```{r, results='asis'}
+```{r, results='asis', echo=FALSE}
 write_video_clip_html('https://nyu.databrary.org/slot/9850/-/asset/11556/download?inline=true', 
                       vid_w_pix = 640, vid_h_pix = 480, show_link = FALSE)
 ```
@@ -171,7 +170,7 @@ write_video_clip_html('https://nyu.databrary.org/slot/9850/-/asset/11556/downloa
 
 ---
 
-```{r, results='asis'}
+```{r, results='asis', echo=FALSE}
 write_video_clip_html('https://nyu.databrary.org/slot/9850/-/asset/11550/download?inline=true', 
                       vid_w_pix = 640, vid_h_pix = 480, show_link = FALSE)
 ```
@@ -188,8 +187,8 @@ write_video_clip_html('https://nyu.databrary.org/slot/9850/-/asset/11550/downloa
 
 - Captures (& preserves)
 - Shows (& helps tell...)
-- Expands the scope of inquiry
-- Provides opportunities for reuse
+- Expands the scope of inquiry (e.g., words +)
+- Provides unparalleled opportunities for reuse
 
 # Video as documentation
 
@@ -201,11 +200,10 @@ write_video_clip_html('https://nyu.databrary.org/slot/9850/-/asset/11550/downloa
 [Gilmore & Adolph, 2017](https://doi.org/10.1038/s41562-017-0128)
 </small>
 
-
 ---
 
-```{r results='asis'}
-write_video_clip_html("https://nyu.databrary.org/slot/11647/0,84928/asset/40653/download?inline=true", vid_w_pix = 640, vid_h_pix = 480, show_link = FALSE)
+```{r, results='asis', echo=FALSE}
+write_video_clip_html("https://nyu.databrary.org/slot/11647/0,84928/asset/40653/download?inline=true", vid_w_pix = 640, show_link = FALSE)
 ```
 
 <small>
@@ -214,7 +212,8 @@ write_video_clip_html("https://nyu.databrary.org/slot/11647/0,84928/asset/40653/
 
 ---
 
-<img src="img/bahrick-vol-326.jpg"/>
+<iframe src="http://doi.org/10.17910/B7.326" height=600 width=1000>
+</iframe>
 
 <small>
 [Bahrick, 2017](http://doi.org/10.17910/B7.326)
@@ -222,8 +221,8 @@ write_video_clip_html("https://nyu.databrary.org/slot/11647/0,84928/asset/40653/
 
 ---
 
-```{r results='asis'}
-write_video_clip_html('https://nyu.databrary.org/slot/16668/0,140984/asset/72645/download?inline=true', show_link = FALSE)
+```{r, results='asis', echo=FALSE}
+write_video_clip_html('https://nyu.databrary.org/slot/16668/0,140984/asset/72645/download?inline=true', vid_w_pix = 640, show_link = FALSE)
 ```
 
 ---
@@ -233,7 +232,7 @@ write_video_clip_html('https://nyu.databrary.org/slot/16668/0,140984/asset/72645
 
 ---
 
-```{r results='asis'}
+```{r, results='asis', echo=FALSE}
 write_video_clip_html('https://nyu.databrary.org/slot/27535/0,400466/asset/122312/download?inline=true', vid_w_pix = 640, vid_h_pix = 480, show_link = FALSE)
 ```
 <small>
@@ -244,8 +243,7 @@ write_video_clip_html('https://nyu.databrary.org/slot/27535/0,400466/asset/12231
 
 ---
 
-<iframe src="https://doi.org/10.1126/science.274.5294.1926" width=1000 height=600/>
-</iframe>
+<img src="img/saffran-etal-1996.jpg"/>
 
 <small>
 [Saffan, Aslin, & Newport 1996](https://doi.org/10.1126/science.274.5294.1926)
@@ -293,6 +291,9 @@ write_video_clip_html('https://nyu.databrary.org/slot/27535/0,400466/asset/12231
 - Make research more transparent
 - Bolster the reproducibility of procedures
 - Accelerate the adoption of new research techniques
+
+---
+
 - Strengthen findings
 - Maximize public investments in research
 
@@ -314,11 +315,15 @@ write_video_clip_html('https://nyu.databrary.org/slot/27535/0,400466/asset/12231
 - No requirement for co-authorship
 - No pre-approval of research questions
 
-## Databrary
+---
+
+<img src="https://nyu.databrary.org/web/images/logo/databrary-nav.svg" height=250px>
+
+---
 
 - Requires researchers secure participant permission to share
 - Requires IRB/ethics board approval to share (but not to browse or show for non-research purposes)
-- Restricts access to authorized researchers
+- Restricts access to institutionally authorized researchers
 
 ## Permission to share
 
@@ -328,7 +333,7 @@ write_video_clip_html('https://nyu.databrary.org/slot/27535/0,400466/asset/12231
 
 ---
 
-```{r results='asis'}
+```{r, results='asis', echo=FALSE}
 write_video_clip_html('https://www.databrary.org/video/example-video-1.mp4', vid_h_pix = 600, vid_w_pix = 800, show_link = FALSE)
 ```
 
@@ -368,7 +373,7 @@ write_video_clip_html('https://www.databrary.org/video/example-video-1.mp4', vid
 
 ---
 
-```{r results='asis'}
+```{r, results='asis', echo=FALSE}
 write_video_clip_html("https://nyu.databrary.org/slot/27087/0,372193/asset/119877/download?inline=true", vid_w_pix = 800, vid_h_pix = 600, show_link = FALSE)
 ```
 <small>
@@ -394,182 +399,150 @@ write_video_clip_html("https://nyu.databrary.org/slot/27087/0,372193/asset/11987
 <iframe src="https://nyu.databrary.org/volume/8" height=600 width=1000>
 </iframe>
 
+<small>
 [Tamis-LeMonda 2013](http://doi.org/10.17910/B7CC74)
+</small>
 
 ---
 
-```{r, include=TRUE}
+```{r vol-8-table, include=TRUE}
 vol_8 <- databraryapi::download_session_csv(vol_id = 8)
-```
-
----
-
-```{r, include=TRUE}
 xtabs(formula = ~ participant.gender + participant.race, data = vol_8) %>%
   knitr::kable(.)
 ```
 
 ---
 
-```{r, include=TRUE}
-vol_8 %>%
+```{r vol-8-race-by-gender, include=TRUE}
+race_gender <- vol_8 %>%
   filter(participant.gender %in% c('Male', 'Female')) %>%
   ggplot() +
   aes(x = participant.race, fill = participant.race) +
   facet_grid(. ~ participant.gender) +
   geom_bar(stat="count") +
-  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+  coord_flip() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1),
+        legend.position = "bottom")
 ```
 
 ---
 
+```{r plot-race-gender, echo=FALSE}
+race_gender
 ```
+
+---
+
+```{r, echo=TRUE, message=FALSE, warning=FALSE, error=FALSE}
 databraryapi::login_db(email = "rogilmore@psu.edu")
 
 play_session_id <- 26295
 play_vol_id <- 444
 
-list_assets_in_session(vol_id = play_vol_id, session_id = play_session_id) %>%
-  select(name, asset_type, asset_id) %>%
-  knitr::kable()
+vol_444_assets <- list_assets_in_session(vol_id = play_vol_id, 
+                                         session_id = play_session_id) %>%
+  select(name, asset_type, asset_id)
 ```
 
 ---
 
-```{r}
-databraryapi::login_db(email = "rogilmore@psu.edu")
-
-play_session_id <- 26295
-play_vol_id <- 444
-
-list_assets_in_session(vol_id = play_vol_id, session_id = play_session_id) %>%
-  select(name, asset_type, asset_id) %>%
-  knitr::kable()
+```{r, echo=FALSE}
+knitr::kable(vol_444_assets)
 ```
 
 ---
 
-```
-# Load language exposure data
-lang_exp <- databraryapi::read_csv_data_as_df(session_id = play_session_id, 
-                                              asset_id = 116787)
-# Plot
-lang_exp %>%
-  ggplot(.) +
-  aes(x = language, fill = language) +
-  facet_grid(exposure_context ~ .) +
-  geom_histogram(stat='count')
-```
-
----
-
-```{r}
+```{r prepare-lang-exp-plot, include=TRUE, message=FALSE, warning=FALSE, error=FALSE}
 lang_exp <- databraryapi::read_csv_data_as_df(session_id = play_session_id, 
                                               asset_id = 116787)
 
-lang_exp %>%
+lang_exp_plot <- lang_exp %>%
   ggplot(.) +
   aes(x = language, fill = language) +
   facet_grid(exposure_context ~ .) +
-  geom_histogram(stat='count')
+  geom_histogram(stat='count') +
+  theme(axis.text = element_text(size = 14))
 ```
 
 ---
 
-```
-vol_254_assets <- list_assets_in_session(254, 14514)
-vol_254_assets %>%
-  filter(mimetype %in% c('video/mp4', 'application/vnd.datavyu')) %>%
-  select(name, asset_type)
-```
----
-
-```{r}
-vol_254_assets <- list_assets_in_session(254, 14514)
-vol_254_assets %>%
-  filter(mimetype %in% c('video/mp4', 'application/vnd.datavyu')) %>%
-  select(name, asset_type)
+```{r plot-lang-exp, echo=FALSE}
+lang_exp_plot
 ```
 
----
+<!-- --- -->
 
-```
-# Pick Datavyu file and download
-dv_info <- filter(vol_254_assets, asset_type == "Datavyu")
-dv_dir <- databraryapi::download_datavyu(vol_id = dv_info$vol_id, 
-    session_id = dv_info$session_id, 
-    asset_id = dv_info$asset_id)
+<!-- ``` -->
+<!-- # Pick Datavyu file and download -->
+<!-- dv_info <- filter(vol_254_assets, asset_type == "Datavyu") -->
+<!-- dv_dir <- databraryapi::download_datavyu(vol_id = dv_info$vol_id,  -->
+<!--     session_id = dv_info$session_id,  -->
+<!--     asset_id = dv_info$asset_id) -->
 
-# Convert to CSV
-databraryapi::extract_dv(in_dir = dv_dir, auto_write_over = TRUE)
-databraryapi::dv_to_csv(dv_dir)
+<!-- # Convert to CSV -->
+<!-- databraryapi::extract_dv(in_dir = dv_dir, auto_write_over = TRUE) -->
+<!-- databraryapi::dv_to_csv(dv_dir) -->
 
-# Load CSV and print out
-dv_fn <- list.files(dv_dir, '\\.csv$', full.names = TRUE)
-(vol_254_14514_dv <- read_csv(dv_fn))
-```
+<!-- # Load CSV and print out -->
+<!-- dv_fn <- list.files(dv_dir, '\\.csv$', full.names = TRUE) -->
+<!-- (vol_254_14514_dv <- read_csv(dv_fn)) -->
+<!-- ``` -->
 
----
+<!-- --- -->
 
-```{r echo=TRUE}
-# Delete tmp directory
-unlink('tmp', recursive = TRUE)
+<!-- ```{r echo=TRUE} -->
+<!-- # Delete tmp directory -->
+<!-- unlink('tmp', recursive = TRUE) -->
 
-# Pick Datavyu file and download
-dv_info <- filter(vol_254_assets, asset_type == "Datavyu")
-dv_dir <- databraryapi::download_datavyu(vol_id = dv_info$vol_id, 
-    session_id = dv_info$session_id, 
-    asset_id = dv_info$asset_id)
+<!-- # Pick Datavyu file and download -->
+<!-- dv_info <- filter(vol_254_assets, asset_type == "Datavyu") -->
+<!-- dv_dir <- databraryapi::download_datavyu(vol_id = dv_info$vol_id,  -->
+<!--     session_id = dv_info$session_id,  -->
+<!--     asset_id = dv_info$asset_id) -->
 
-# Convert to CSV
-databraryapi::extract_dv(in_dir = dv_dir, auto_write_over = TRUE)
-databraryapi::dv_to_csv(dv_dir)
+<!-- # Convert to CSV -->
+<!-- databraryapi::extract_dv(in_dir = dv_dir, auto_write_over = TRUE) -->
+<!-- databraryapi::dv_to_csv(dv_dir) -->
 
-# Load CSV and print out
-dv_fn <- list.files(dv_dir, '\\.csv$', full.names = TRUE)
-(vol_254_14514_dv <- read_csv(dv_fn))
-```
+<!-- # Load CSV and print out -->
+<!-- dv_fn <- list.files(dv_dir, '\\.csv$', full.names = TRUE) -->
+<!-- (vol_254_14514_dv <- read_csv(dv_fn)) -->
+<!-- ``` -->
 
----
+<!-- --- -->
 
-```{r}
-(babyloc <- filter(vol_254_14514_dv, code == 'babyloc'))
-```
+<!-- ```{r} -->
+<!-- (babyloc <- filter(vol_254_14514_dv, code == 'babyloc')) -->
+<!-- ``` -->
 
----
+<!-- --- -->
 
-```{r}
-unique(babyloc$code.value) 
-```
+<!-- ```{r} -->
+<!-- unique(babyloc$code.value)  -->
+<!-- ``` -->
 
----
+<!-- --- -->
 
-```{r}
-(babyloc_segs <- dplyr::filter(babyloc, code.value == 'h'))
-```
+<!-- ```{r} -->
+<!-- (babyloc_segs <- dplyr::filter(babyloc, code.value == 'h')) -->
+<!-- ``` -->
 
----
+<!-- --- -->
 
-```{r}
-this_seg <- 1
-seg_range <- databraryapi::get_asset_segment_range(vol_id = 254, session_id = 14514, asset_id = 61054)
+<!-- ```{r} -->
+<!-- this_seg <- 1 -->
+<!-- seg_range <- databraryapi::get_asset_segment_range(vol_id = 254, session_id = 14514, asset_id = 61054) -->
 
-onset_ms <- as.integer(lubridate::seconds(babyloc$onset)*1000) + seg_range[1] 
-offset_ms <- as.integer(lubridate::seconds(babyloc$offset)*1000) + seg_range[1] 
+<!-- onset_ms <- as.integer(lubridate::seconds(babyloc$onset)*1000) + seg_range[1]  -->
+<!-- offset_ms <- as.integer(lubridate::seconds(babyloc$offset)*1000) + seg_range[1]  -->
 
-selected_seg <- paste0(onset_ms, ",", offset_ms)
-message(paste0('Picking segment ', selected_seg, '.'))
-```
+<!-- selected_seg <- paste0(onset_ms, ",", offset_ms) -->
+<!-- message(paste0('Picking segment ', selected_seg, '.')) -->
+<!-- ``` -->
 
----
+## "Clip" your audio or video
 
-```{r}
-write_video_clip_html('https://nyu.databrary.org/slot/14514/71873879,71875206/asset/61054/download?inline=true', vid_w_pix = 480, vid_h_pix = 320, show_link = FALSE)
-```
-
-<small>
-https://nyu.databrary.org/slot/14514/71873879,71875206/asset/61054/download?inline=true
-</small>
+- Databrary API returns segments given `start_time, end_time`
 
 ## Prepare your video + other data for sharing
 
@@ -584,7 +557,7 @@ https://nyu.databrary.org/slot/14514/71873879,71875206/asset/61054/download?inli
 
 ## Register for Databrary access
 
-## Download, test, and help me improve the [*databraryapi*](https://github.com/PLAY-behaviorome/databraryapi) package
+## Download, test, and help improve the [*databraryapi*](https://github.com/PLAY-behaviorome/databraryapi) and [*databrarypy*](https://github.com/PLAY-behaviorome/databrarypy) packages
 
 ## Secure permission to share from research participants
 
@@ -594,11 +567,27 @@ https://nyu.databrary.org/slot/14514/71873879,71875206/asset/61054/download?inli
 
 ---
 
-<img src="https://nyu.databrary.org/web/images/logo/databrary-nav.svg" height=250px>
+<video width="800" data-autoplay>
+  <source src="https://github.com/gilmore-lab/DEVSEC-2018/blob/master/mov/databrary-splash.mp4?raw=true" type="video/mp4">
+  </video>
+<small>
+rogilmore@psu.edu</br>
+<https://gilmore-lab.github.io></br>
+<https://gilmore-lab.github.io/2019-06-MacWhinney-Symposium/databrary-workshop/></br>
+[\@rogilmore](https://twitter.com/rogilmore)
+</small>
+
+# Materials
 
 ---
 
-rogilmore@psu.edu</br>
+<small>
+This talk was produced on `r Sys.Date()` in [RStudio](http://rstudio.com) version using R Markdown and the reveal.JS framework.
+The code and materials used to generate the slides may be found at <https://github.com/gilmore-lab/2019-06-MacWhinney-Symposium/databrary-workshop/>.
+Information about the R Session that produced the code is as follows:
 
-<https://gilmore-lab.github.io/2019-06-MacWhinney-Symposium/databrary-workshop/>
+---
 
+```{r session-info}
+sessionInfo()
+```

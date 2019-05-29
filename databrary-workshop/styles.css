@@ -15,7 +15,8 @@
 }
 
 .reveal section code {
-  font-size: 1.50em;
+  font-size: 1.25em;
+  line-height: 1.25em;
   font-family: monospace;
 }
 
