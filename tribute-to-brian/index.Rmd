@@ -5,7 +5,7 @@ date: "`r Sys.time()`"
 bib: references.bib
 output:
   revealjs::revealjs_presentation:
-    css: styles.css
+    css: ../tribute-to-brian/styles.css
     self_contained: false
     lib_dir: libs
     incremental: false
@@ -17,10 +17,31 @@ output:
       previewLinks: false
       center: true
       touch: true
+params:
+  db_login: rogilmore@psu.edu
 ---
 
 ```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, cache=TRUE)
+
+source('../databrary-workshop/R/write_video_clip_html.R')
+
 knitr::opts_chunk$set(echo = FALSE)
+
+if (!require(qrcode)) {
+  install.packages('qrcode')
+}
+library(qrcode)
+
+# Log-in to Databrary
+logged_in <- databraryapi::login_db(params$db_login)
+```
+
+---
+
+```{r qr-code, echo=FALSE, warning=FALSE, message=FALSE}
+talk_url <- 'https://gilmore-lab.github.io/2019-06-MacWhinney-Symposium/datatribute-to-brian/'
+qrcode::qrcode_gen(talk_url)
 ```
 
 # Preliminaries
@@ -39,7 +60,176 @@ knitr::opts_chunk$set(echo = FALSE)
 
 <!-- Funding sources with icons -->
 
+---
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/DenverCP.JPG/266px-DenverCP.JPG" height=150px/>
+<img src="http://watson.brown.edu/ds/sites/all/themes/ds/img/header/brown_large.png" height=150px/>
+<img src="https://www.wheretraveler.com/sites/default/files/styles/wt17_promoted/public/WashingtonDC-shutterstock_93633676.jpg?itok=IT7CL9PU" height=150px/>
+<img src="https://ai.cs.cmu.edu/sites/default/files/CMU.png" height=150px/>
+<img src="http://onwardstate.com/wp-content/uploads/2014/10/93" height=150px/>
+<img src="../databrary-workshop/img/sleic.jpg" height=150px/></br>
+<img src="https://nyu.databrary.org/web/images/logo/databrary-nav.svg" height=150px>
+
+<!-- Photo montage of ROG background -->
+
+<!-- As brief background, I grew up in Denver, studied cognitive science at Brown, worked in non-profit management in DC before completing my Ph.D. in developmental cognitive neuroscience at Carnegie Mellon. -->
+<!-- That's where I met Karen Adolph. -->
+<!-- I moved to Penn State after finishing my degree. -->
+<!-- I'm an infrastructure guy. -->
+<!-- I founded Penn State's imaging center, and I am the co-founder and co-director of Databrary. -->
+
 ## Overview
+
+- Why open science matters
+- Open by design: The MacWhinney legacy
+- Databrary
+
+# Why science must be open
+
+# Psychology is the hardest science
+
+<div class="notes">
+I claim that psychology is the hardest science.
+</div>
+
+## (Harder than physics)
+
+<div class="notes">
+Harder than physics.
+I suspect most of the people in this room agree, but in case there are skeptics, let me try to convince you in two simple figures.
+</div>
+
+---
+
+<img src="img/psych-harder-1.jpg" height=500px/>
+
+<!-- First year physical science students often face problems like this. Given a mass M, an inclined plane with specified geometry, and a gravitational field, we can predict the future with high precision. What's going to happen next? -->
+
+<!-- Yes, but if we change one element in this equation, the problem becomes immensely harder. What if we change the mass to a mouse? -->
+
+<div class="notes">
+First year physical science students often face problems like this. Given a mass M, an inclined plane with specified geometry, and a gravitational field, we can predict the future with high precision. What's going to happen next?
+
+Yes, but if we change one element in this equation, the problem becomes immensely harder. What if we change the mass to a mouse?
+</div>
+
+---
+
+<img src="img/psych-harder-2.jpg" height=500px/>
+
+<!-- What happens now? We don't know. -->
+
+<div class="notes">
+What happens now? 
+We don't have a clue!
+Even asking the question seems humorous.
+
+[RIGHT]
+
+Let's examine why it's so hard.
+</div>
+
+## Why it's so hard
+
+---
+
+<div class="centered">
+<img src="https://www.nature.com/news/polopoly_fs/7.36716.1469695923!/image/reproducibility-graphic-online1.jpeg_gen/derivatives/landscape_630/reproducibility-graphic-online1.jpeg" height=600px>
+</br>
+<small>
+[Baker, 2016](http://doi.org/10.1038/533452a)
+</small>
+</div>
+
+<div class="notes">
+</div>
+
+---
+
+<div class="centered">
+<img src="https://www.nature.com/news/polopoly_fs/7.36718.1464174471!/image/reproducibility-graphic-online3.jpg_gen/derivatives/landscape_630/reproducibility-graphic-online3.jpg" width=700px>
+</br>
+<small>
+[Baker, 2016](http://doi.org/10.1038/533452a)
+</small>
+</div>
+
+<div class="notes">
+</div>
+
+---
+
+<div class="centered">
+<img src="https://www.nature.com/news/polopoly_fs/7.36719.1464174488!/image/reproducibility-graphic-online4.jpg_gen/derivatives/landscape_630/reproducibility-graphic-online4.jpg" width=700px>
+</br>
+<small>
+[Baker, 2016](http://doi.org/10.1038/533452a)
+</small>
+</div>
+
+<div class="notes">
+</div>
+
+
+<div class="notes">
+Look at the fields where the highest levels of failures to replicate are reported: chemistry, biology, physics & engineering, earth and mineral sciences.
+The so-called 'hard' sciences.
+
+I'm not sure, but I think psychology and the social sciences fall into 'other'.
+See, we're not doing so badly!
+</div>
+
+## Openness and transparency make it easier
+
+# Open by design: The MacWhinney legacy
+
+## The central importance of data in scientific advance
+
+## Data must be openly shared
+
+## Data must be organized and shared in common formats
+
+## Discovery requires software tools
+
+## Nurturing research communities
+
+# Inspired by Brian
+
+## Databrary
+
+## Play & Learning Across a Year (PLAY)
+
+- What do mothers and infants actually *DO*
+
+---
+
+```{r, results='asis', echo=FALSE}
+write_video_clip_html("https://nyu.databrary.org/slot/27087/0,372193/asset/119877/download?inline=true", vid_w_pix = 800, vid_h_pix = 600, show_link = FALSE)
+```
+
+<small>
+[Adolph, Tamis-LeMonda, & Gilmore 2017](https://nyu.databrary.org/volume/444#panel-data)
+</small>
+
+<div class="notes">
+We're also creating a large-scale, diverse and rich data set for others to exploit via the Play & Learning Across a Year (PLAY) Project.
+</div>
+
+---
+
+- $n=900$ infant/mother dyads, $n=300$ 12-, 18-, and 24-month-olds
+- Demographics, health status, media use, temperament
+- Modified MB-CDI (interview, video-recorded, English/Spanish item-level equivalents)
+- Open protocol, video documentation
+
+---
+
+<iframe src="https://play-project.org/" height=600 width=1000>
+</iframe>
+
+<div class="notes">
+The entire PLAY project protocol, including videos of procedures, coding definitions, survey items, etc. is openly shared.
+</div>
 
 # Thank you
 
