@@ -21,7 +21,7 @@ params:
   db_login: rogilmore@psu.edu
 ---
 
-```{r setup, cache=TRUE, echo=FALSE, message=FALSE}
+```{r setup, echo=FALSE, message=FALSE}
 knitr::opts_chunk$set(echo = FALSE, cache=TRUE)
 source('R/write_video_clip_html.R')
 
@@ -202,6 +202,26 @@ Data are represented in a container that represents the specific recording sessi
 <div class="notes">
 It's also easy to see (and readily download) demographic data about the participants.
 </div>
+
+
+---
+
+<iframe src="http://doi.org/10.17910/B7CC74" height=600 width=1000>
+</iframe>
+
+<small>
+[Tamis Le-Monda 2013](http://doi.org/10.17910/B7CC74)
+</small>
+
+---
+
+```{r, results='asis', echo=FALSE}
+write_video_clip_html('https://nyu.databrary.org/slot/505/60000,1466399/asset/660/download?inline=true', vid_w_pix = 640, vid_h_pix = 480, show_link = FALSE)
+```
+
+<small>
+[Tamis Le-Monda 2013](http://doi.org/10.17910/B7CC74)
+</small>
 
 ---
 
