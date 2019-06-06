@@ -203,6 +203,24 @@ Data are represented in a container that represents the specific recording sessi
 It's also easy to see (and readily download) demographic data about the participants.
 </div>
 
+---
+
+<iframe src="http://doi.org/10.17910/B7.330" height=600 width=1000>
+</iframe>
+
+<small>
+[Bergelson 2017](http://doi.org/10.17910/B7.330)
+</small>
+
+---
+
+```{r, results='asis', echo=FALSE}
+write_video_clip_html('https://nyu.databrary.org/slot/16535/61283432,61401484/asset/96434/download?inline=true', vid_w_pix = 640, vid_h_pix = 480, show_link = FALSE)
+```
+
+<small>
+[Bergelson 2017](http://doi.org/10.17910/B7.330)
+</small>
 
 ---
 
