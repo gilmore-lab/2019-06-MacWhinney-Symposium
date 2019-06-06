@@ -228,7 +228,7 @@ write_video_clip_html('https://nyu.databrary.org/slot/16535/61283432,61401484/as
 </iframe>
 
 <small>
-[Tamis Le-Monda 2013](http://doi.org/10.17910/B7CC74)
+[Tamis-LeMonda 2013](http://doi.org/10.17910/B7CC74)
 </small>
 
 ---
@@ -238,7 +238,7 @@ write_video_clip_html('https://nyu.databrary.org/slot/505/60000,1466399/asset/66
 ```
 
 <small>
-[Tamis Le-Monda 2013](http://doi.org/10.17910/B7CC74)
+[Tamis-LeMonda 2013](http://doi.org/10.17910/B7CC74)
 </small>
 
 ---
