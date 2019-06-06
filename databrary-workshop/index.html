@@ -489,7 +489,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <section>
     <h1 class="title">Video as Data &amp; Documentation</h1>
     <h2 class="author">Rick O. Gilmore</h2>
-    <h3 class="date">2019-06-06 14:16:57</h3>
+    <h3 class="date">2019-06-06 15:09:26</h3>
 </section>
 
 <section class="slide level2">
@@ -963,7 +963,9 @@ Private files are restricted to the authorized researcher who uploaded them and 
 <span class="st">  </span><span class="kw">facet_grid</span>(. <span class="op">~</span><span class="st"> </span>participant.gender) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat=</span><span class="st">&quot;count&quot;</span>) <span class="op">+</span>
 <span class="st">  </span><span class="kw">coord_flip</span>() <span class="op">+</span>
-<span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.text.x =</span> <span class="kw">element_text</span>(<span class="dt">angle =</span> <span class="dv">90</span>, <span class="dt">hjust =</span> <span class="dv">1</span>),
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.text.x =</span> <span class="kw">element_text</span>(<span class="dt">angle =</span> <span class="dv">90</span>, <span class="dt">hjust =</span> <span class="dv">1</span>, <span class="dt">size =</span> <span class="dv">16</span>),
+        <span class="dt">axis.title =</span> <span class="kw">element_text</span>(<span class="dt">size =</span> <span class="dv">16</span>),
+        <span class="dt">strip.text =</span> <span class="kw">element_text</span>(<span class="dt">size =</span> <span class="dv">16</span>),
         <span class="dt">legend.position =</span> <span class="st">&quot;bottom&quot;</span>)</code></pre></div>
 <aside class="notes">
 <p>Or you can create a plot of the data for a report to your collaborators.</p>
@@ -1037,7 +1039,9 @@ lang_exp_plot &lt;-<span class="st"> </span>lang_exp <span class="op">%&gt;%</sp
 <span class="st">  </span><span class="kw">aes</span>(<span class="dt">x =</span> language, <span class="dt">fill =</span> language) <span class="op">+</span>
 <span class="st">  </span><span class="kw">facet_grid</span>(exposure_context <span class="op">~</span><span class="st"> </span>.) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">stat=</span><span class="st">&#39;count&#39;</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.text =</span> <span class="kw">element_text</span>(<span class="dt">size =</span> <span class="dv">13</span>),
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.text =</span> <span class="kw">element_text</span>(<span class="dt">size =</span> <span class="dv">16</span>),
+        <span class="dt">strip.text =</span> <span class="kw">element_text</span>(<span class="dt">size =</span> <span class="dv">16</span>),
+        <span class="dt">axis.title =</span> <span class="kw">element_text</span>(<span class="dt">size =</span> <span class="dv">13</span>),
         <span class="dt">legend.position =</span> <span class="st">&quot;none&quot;</span>)</code></pre></div>
 <aside class="notes">
 <p>Since you’re a language researcher, you’re especially interested in the types of languages children are exposed to and in what settings.</p>

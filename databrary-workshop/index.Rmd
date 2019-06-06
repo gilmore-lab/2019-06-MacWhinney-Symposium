@@ -700,7 +700,9 @@ race_gender <- vol_8 %>%
   facet_grid(. ~ participant.gender) +
   geom_bar(stat="count") +
   coord_flip() +
-  theme(axis.text.x = element_text(angle = 90, hjust = 1),
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, size = 16),
+        axis.title = element_text(size = 16),
+        strip.text = element_text(size = 16),
         legend.position = "bottom")
 ```
 
@@ -748,7 +750,9 @@ lang_exp_plot <- lang_exp %>%
   aes(x = language, fill = language) +
   facet_grid(exposure_context ~ .) +
   geom_histogram(stat='count') +
-  theme(axis.text = element_text(size = 13),
+  theme(axis.text = element_text(size = 16),
+        strip.text = element_text(size = 16),
+        axis.title = element_text(size = 13),
         legend.position = "none")
 ```
 
