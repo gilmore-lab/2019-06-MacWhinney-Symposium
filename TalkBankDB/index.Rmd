@@ -1,0 +1,56 @@
+---
+title: "TalkBankDB demo"
+author: "Rick O. Gilmore"
+date: "`r Sys.time()`"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    number_sections: true
+    df_paged: true
+    code_folding: show
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, cache=TRUE)
+
+# Source the functions for the demo
+source("R/demo.R")
+```
+
+# Background
+
+John Kowalksi presented his work on TalkBankDB.
+This document describes how to run the demos John presented.
+
+TalkBankDB may be accessed here: <https://sla.talkbank.org/TalkBankDB/>
+
+# Load data from TalkBank
+
+This takes a few moments, so be patient.
+
+```{r load-data-from-web}
+loadFromWeb()
+```
+
+# Plot word frequency by age
+
+The user needs to provide a target word. 
+
+## Frequency of `the`
+
+We'll use `the` for this example.
+
+```{r plot-freq-the}
+freqByAge('the')
+```
+
+## Frequency of `mommy`
+
+Here's an example of `mommy`.
+
+```{r plot-freq-mommy}
+freqByAge('mommy')
+```
+
