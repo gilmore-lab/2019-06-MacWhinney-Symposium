@@ -510,8 +510,6 @@ Data should be...
 
 ---
 
-<!-- <iframe src="https://sla.talkbank.org/TalkBankDB/" width=1000 height=600> -->
-<!-- </iframe> -->
 <img src="img/talkbank-db.jpg">
 
 <small>
@@ -586,7 +584,8 @@ write_video_clip_html("http://datavyu.org/user-guide/_static/video/coding-exampl
 
 ---
 
-<iframe src="http://datavyu.org/user-guide/best-practices.html" height=600 width=1000/>
+<iframe src="http://datavyu.org/user-guide/best-practices.html" height=600 width=1000>
+</iframe>
 
 <small>
 <http://datavyu.org/user-guide/best-practices.html>
@@ -612,10 +611,6 @@ write_video_clip_html("https://nyu.databrary.org/slot/27087/0,372193/asset/11987
 [Adolph, Tamis-LeMonda, & Gilmore 2017](https://nyu.databrary.org/volume/444#panel-data)
 </small>
 
-<div class="notes">
-We're also creating a large-scale, diverse and rich data set for others to exploit via the Play & Learning Across a Year (PLAY) Project.
-</div>
-
 ---
 
 - ~$n=1,000$ infant/mother dyads, $n=300$ 12-, 18-, and 24-month-olds
@@ -625,9 +620,7 @@ We're also creating a large-scale, diverse and rich data set for others to explo
 
 ---
 
-<img src="http://cdn2.hubspot.net/hub/134568/file-1208368053-jpg/6-blind-men-hans.jpg" height=550px>
-
-<!-- The whole elephant -->
+<img src="http://cdn2.hubspot.net/hub/134568/file-1208368053-jpg/6-blind-men-hans.jpg" height=550px/>
 
 ---
 
@@ -669,7 +662,7 @@ We're also creating a large-scale, diverse and rich data set for others to explo
 
 <img src="https://www.um.edu.mt/__data/assets/image/0005/314807/openscience1.jpg" height=550px/>
 
-<!-- Open science word cloud -->
+<!--- Open science word cloud -->
 
 ---
 
