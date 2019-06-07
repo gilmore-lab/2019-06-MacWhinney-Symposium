@@ -5,7 +5,7 @@ date: "`r Sys.time()`"
 bib: references.bib
 output:
   revealjs::revealjs_presentation:
-    css: ../tribute-to-brian/styles.css
+    css: styles.css
     self_contained: false
     lib_dir: libs
     incremental: false
@@ -27,6 +27,9 @@ knitr::opts_chunk$set(echo = FALSE, cache=TRUE)
 source('../databrary-workshop/R/write_video_clip_html.R')
 
 knitr::opts_chunk$set(echo = FALSE)
+
+library(tidyverse)
+library(ggplot2)
 
 if (!require(qrcode)) {
   install.packages('qrcode')
@@ -72,21 +75,15 @@ qrcode::qrcode_gen(talk_url)
 
 <!-- Photo montage of ROG background -->
 
-<!-- As brief background, I grew up in Denver, studied cognitive science at Brown, worked in non-profit management in DC before completing my Ph.D. in developmental cognitive neuroscience at Carnegie Mellon. -->
-<!-- That's where I met Karen Adolph. -->
-<!-- I moved to Penn State after finishing my degree. -->
-<!-- I'm an infrastructure guy. -->
-<!-- I founded Penn State's imaging center, and I am the co-founder and co-director of Databrary. -->
-
 ## Overview
 
-- Why open science matters
-- Open by design: The MacWhinney legacy
-- Databrary
+- The hardest science
+- Open by design
+- Inspired by this open science pioneer
 
-# Why science must be open
+# The hardest science
 
-# Psychology is the hardest science
+## Psychology is the hardest science
 
 <div class="notes">
 I claim that psychology is the hardest science.
@@ -119,85 +116,297 @@ Yes, but if we change one element in this equation, the problem becomes immensel
 
 <!-- What happens now? We don't know. -->
 
-<div class="notes">
-What happens now? 
-We don't have a clue!
-Even asking the question seems humorous.
+# Open by design
 
-[RIGHT]
-
-Let's examine why it's so hard.
-</div>
-
-## Why it's so hard
+## Data are fundamental
 
 ---
 
-<div class="centered">
-<img src="https://www.nature.com/news/polopoly_fs/7.36716.1469695923!/image/reproducibility-graphic-online1.jpeg_gen/derivatives/landscape_630/reproducibility-graphic-online1.jpeg" height=600px>
-</br>
-<small>
-[Baker, 2016](http://doi.org/10.1038/533452a)
-</small>
-</div>
+<img src="https://theintercept.imgix.net/wp-uploads/sites/1/2018/09/American-Dissident-Noam-Chomsky-on-the-State-of-the-Empire-1537928785.jpg?auto=compress%2Cformat&q=90&fit=crop&w=1440&h=720"/>
+
+Noam Chomsky
 
 <div class="notes">
+Or the cognitive critique of behaviorism articulated most effectively by Noam Chomsky.
 </div>
 
 ---
 
-<div class="centered">
-<img src="https://www.nature.com/news/polopoly_fs/7.36718.1464174471!/image/reproducibility-graphic-online3.jpg_gen/derivatives/landscape_630/reproducibility-graphic-online3.jpg" width=700px>
-</br>
-<small>
-[Baker, 2016](http://doi.org/10.1038/533452a)
-</small>
-</div>
-
-<div class="notes">
-</div>
+- Can children acquire language from the environment?
+- Or do they require rich, prior, innate knowledge about the structure of language?
 
 ---
 
-<div class="centered">
-<img src="https://www.nature.com/news/polopoly_fs/7.36719.1464174488!/image/reproducibility-graphic-online4.jpg_gen/derivatives/landscape_630/reproducibility-graphic-online4.jpg" width=700px>
-</br>
+- What is the child's language environment?
+
+---
+
+<iframe src="https://talkbank.org/" height=600 width=1000>
+</iframe>
+
+---
+
+<img src="img/geisler-2008.jpg" height=600/>
+
+---
+
+<img src="img/raudies-gilmore.jpg" height=600/>
+
+---
+
+<video height="320" data-autoplay>
+  <source src="https://nyu.databrary.org/slot/7739/0,26134/asset/16749/download?inline=true" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+<video height="320" data-autoplay>
+  <source src="https://nyu.databrary.org/slot/7739/0,26634/asset/16747/download?inline=true" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
 <small>
-[Baker, 2016](http://doi.org/10.1038/533452a)
+[Gilmore, Raudies, Franchak, & Adolph, 2015](http://doi.org/10.17910/B7.116)
 </small>
-</div>
 
-<div class="notes">
-</div>
+---
 
+>"*One of the most fundamental questions in psychology concerns the role of experience. What are the essential components of human experience?*"
 
-<div class="notes">
-Look at the fields where the highest levels of failures to replicate are reported: chemistry, biology, physics & engineering, earth and mineral sciences.
-The so-called 'hard' sciences.
-
-I'm not sure, but I think psychology and the social sciences fall into 'other'.
-See, we're not doing so badly!
-</div>
-
-## Openness and transparency make it easier
-
-# Open by design: The MacWhinney legacy
-
-## The central importance of data in scientific advance
+<small>
+[The Homeview Project - Smith et al.](http://www.indiana.edu/~cogdev/homeview.html)
+</small>
 
 ## Data must be openly shared
 
+---
+
+>"*Why would I share my data? No one would want to see it.*"
+
+A random colleague
+
+---
+
+>"*It's too much work to share.*"
+
+Another random colleague
+
+---
+
+>"*I don't want someone to scoop me or do an analysis I plan to do someday.*"
+
+More random colleagues than you might imagine
+
+---
+
+<iframe src="https://talkbank.org/share/principles.html" height=600 width=1000>
+</iframe>
+
+<small>
+<https://talkbank.org/share/principles.html>
+</small>
+
+---
+
+>"*Principles of scientific integrity require that ideas be put to a test. In order to test your ideas about your data, you need to open them up to others who will either support or challenge your ideas.*"
+
+<small>
+<https://talkbank.org/share/principles.html>
+</small>
+
+---
+
+>"*Some types of claims can only be tested against large data sets or against comparisons of somewhat similar data sets. To make these analyses, we often need more and more data.*"
+
+<small>
+<https://talkbank.org/share/principles.html>
+</small>
+
+---
+
+>"*Much of the work in science is conducted using public funds. We have an obligation to the public to make maximally efficient use of these data. For example, the NIH has now issued guidelines on this issue.*"
+
+<small>
+<https://talkbank.org/share/principles.html>
+</small>
+
+---
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/RussPoldrack.jpg/330px-RussPoldrack.jpg"/>
+
+Russ Poldrack, founder of [OpenNeuro](https://openneuro.org/), [The Cognitive Atlas](https://www.cognitiveatlas.org/)
+
+---
+
+>"*...the principles of human subject research require an analysis of both risks and benefits...*"
+
+<small>
+[Brakewood & Poldack, 2013](http://dx.doi.org/10.1016/j.neuroimage.2013.02.040)
+</small>
+
+---
+
+>"*...such an analysis suggests that researchers may have a positive duty to share data in order to maximize the contribution that individual participants have made.*"
+
+<small>
+[Brakewood & Poldack, 2013](http://dx.doi.org/10.1016/j.neuroimage.2013.02.040)
+</small>
+
+## Robert Merton
+
+<img src="https://upload.wikimedia.org/wikipedia/en/0/08/Robert_K_Merton.jpg" height=450px/>
+
+---
+
+<img src="https://www.klinebooks.com/pictures/28217.jpg?v=1428617395"/>
+
+---
+
+- **universalism**: scientific validity is independent of sociopolitical status/personal attributes of its participants
+- **communalism**: common ownership of scientific goods (intellectual property)
+
+---
+
+- **disinterestedness**: scientific institutions benefit a common scientific enterprise, not specific individuals
+- **organized skepticism**: claims should be exposed to critical scrutiny before being accepted
+
+---
+
+<img src="https://www.psychologicalscience.org/redesign/wp-content/uploads/2017/12/Friday-135x-e1517670488818-609x419.jpg" height=500px/>
+
+<small>
+Walter Mischel
+</small>
+
+---
+
+<img src="https://www.rd.com/wp-content/uploads/2017/02/01-How-Bad-is-it-to-Share-a-Toothbrush-159311405-ABykov-760x506.jpg" height=600px/>
+
+---
+
+> "*...psychologists tend to treat other peoples’ theories like toothbrushes; no self-respecting individual wants to use anyone else’s.*"
+<small>
+[Mischel, 2009](https://www.psychologicalscience.org/observer/becoming-a-cumulative-science)
+</small>
+
+---
+
+> "*The toothbrush culture undermines the building of a genuinely cumulative science, encouraging more parallel play and solo game playing, rather than building on each other’s directly relevant best work.*"
+
+<small>
+[Mischel, 2009](https://www.psychologicalscience.org/observer/becoming-a-cumulative-science)
+</small>
+
 ## Data must be organized and shared in common formats
 
-## Discovery requires software tools
+---
 
-## Nurturing research communities
+- CHAT, extensions for CA, PhonBank, etc...
 
-# Inspired by Brian
+---
 
-## Databrary
+<iframe width="888" height="500" src="https://www.youtube.com/embed/66oNv_DJuPc" frameborder="0" allow="accelerometer; data-autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
 
-## Play & Learning Across a Year (PLAY)
+<!-- <https://www.youtube.com/embed/66oNv_DJuPc> -->
+
+---
+
+<img src="img/fair-data-principles.jpg"/>
+
+<small>
+[Wilkinson et al., 2016](http://dx.doi.org/10.1038/sdata.2016.18)
+</small>
+
+---
+
+Data should be...
+
+- **F**indable
+- **A**ccessible
+- **I**nteroperable
+- **R**eusable
+
+## Discovery requires powerful tools
+
+## (and tool-building represents an invaluable, important, and high-impace scholarly contribution)
+
+---
+
+<iframe src="http://dali.talkbank.org/clan/" height=600 width=1000>
+</iframe>
+
+---
+
+<img src="img/talkbank-cites.jpg"/>
+
+<img src="img/childes-cites.jpg"/>
+
+## Data + tools can energize and help build research communities
+
+---
+
+<iframe src="http://childes-db.stanford.edu/" width=1000 height=600>
+</iframe>
+
+<small>
+<http://childes-db.stanford.edu/>
+</small>
+
+---
+
+<!-- <iframe src="https://sla.talkbank.org/TalkBankDB/" width=1000 height=600> -->
+<!-- </iframe> -->
+<img src="img/talkbank-db.jpg">
+
+<small>
+<https://sla.talkbank.org/TalkBankDB/>
+</small>
+
+---
+
+- child language
+- aphasia, dementia, ASD, RHD, TBI
+- bi/multilingualism
+- phonology, syntax, semantics, behavior
+- audio, video, transcripts
+
+# Inspirations
+
+---
+
+<video width="800" data-autoplay>
+  <source src="https://github.com/gilmore-lab/DEVSEC-2018/blob/master/mov/databrary-splash.mp4?raw=true" type="video/mp4">
+  </video>
+
+---
+
+- Share video, audio, *.cha, .csv, etc.
+- Access restricted to institutionally authorized researchers
+- Citation required, but no pre-approval of research questions
+
+---
+
+<img src="img/datavyu.jpg"/>
+
+---
+
+```{r, results='asis', echo=FALSE}
+write_video_clip_html("http://datavyu.org/user-guide/_static/video/coding-example.mp4", vid_w_pix = 800, vid_h_pix = 600, show_link = FALSE)
+```
+
+<small>
+<http://datavyu.org/user-guide/walkthrough-videos.html>
+</small>
+
+---
+
+<iframe src="http://datavyu.org/user-guide/best-practices.html" height=600 width=1000/>
+
+<small>
+<http://datavyu.org/user-guide/best-practices.html>
+</small>
+
+## Play & Learning Across a Year (PLAY) project
 
 - What do mothers and infants actually *DO*
 
@@ -227,19 +436,44 @@ We're also creating a large-scale, diverse and rich data set for others to explo
 <iframe src="https://play-project.org/" height=600 width=1000>
 </iframe>
 
-<div class="notes">
-The entire PLAY project protocol, including videos of procedures, coding definitions, survey items, etc. is openly shared.
-</div>
+---
 
-# Thank you
+```{r databrary-growth-plot, echo=TRUE}
+databraryapi::read_csv_data_as_df() %>%
+  ggplot(.) +
+  aes(Auth_Investigators, Institutions) +
+  geom_point()
+```
+
+<http://github.com/PLAY-behaviorome/databraryapi>
 
 ---
 
-<img src="https://nyu.databrary.org/web/images/logo/databrary-nav.svg" height=250px>
+<img src="https://www.brainyquote.com/photos_tr/en/h/harrystruman/109615/harrystruman1-2x.jpg"/>
 
 ---
 
+<video width="800" data-autoplay>
+  <source src="https://github.com/gilmore-lab/DEVSEC-2018/blob/master/mov/databrary-splash.mp4?raw=true" type="video/mp4">
+</video>
+
+<small>
 rogilmore@psu.edu</br>
+<https://gilmore-lab.github.io></br>
+<https://gilmore-lab.github.io/2019-06-MacWhinney-Symposium/databrary-workshop/tribute-to-brian/></br>
+[\@rogilmore](https://twitter.com/rogilmore)
+</small>
 
-<https://gilmore-lab.github.io/2019-06-MacWhinney-Symposium/databrary-workshop/>
+---
 
+<small>
+This talk was produced on `r Sys.Date()` in [RStudio](http://rstudio.com) version using R Markdown and the reveal.JS framework.
+The code and materials used to generate the slides may be found at <https://github.com/gilmore-lab/2019-06-MacWhinney-Symposium/tribute-to-brian/>.
+Information about the R Session that produced the code is as follows:
+
+---
+
+```{r session-info}
+sessionInfo()
+```
+</small>

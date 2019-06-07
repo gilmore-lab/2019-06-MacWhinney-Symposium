@@ -11,6 +11,43 @@
   <link rel="stylesheet" href="libs/reveal.js-3.3.0.1/css/reveal.css"/>
 
 
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
 
 <link rel="stylesheet" href="libs/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
 
@@ -60,7 +97,7 @@
 
     <style type="text/css">code{white-space: pre;}</style>
 
-    <link rel="stylesheet" href="../tribute-to-brian/styles.css"/>
+    <link rel="stylesheet" href="styles.css"/>
 
 <!-- Printing and PDF exports -->
 <script id="paper-css" type="application/dynamic-css">
@@ -452,7 +489,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <section>
     <h1 class="title">Open by Design</h1>
     <h2 class="author">Rick O. Gilmore &amp; Karen E. Adolph</h2>
-    <h3 class="date">2019-06-05 11:26:41</h3>
+    <h3 class="date">2019-06-06 22:22:43</h3>
 </section>
 
 <section class="slide level2">
@@ -467,21 +504,20 @@ document.getElementsByTagName('head')[0].appendChild(style);
 
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/DenverCP.JPG/266px-DenverCP.JPG" height=150px/> <img src="http://watson.brown.edu/ds/sites/all/themes/ds/img/header/brown_large.png" height=150px/> <img src="https://www.wheretraveler.com/sites/default/files/styles/wt17_promoted/public/WashingtonDC-shutterstock_93633676.jpg?itok=IT7CL9PU" height=150px/> <img src="https://ai.cs.cmu.edu/sites/default/files/CMU.png" height=150px/> <img src="http://onwardstate.com/wp-content/uploads/2014/10/93" height=150px/> <img src="../databrary-workshop/img/sleic.jpg" height=150px/></br> <img src="https://nyu.databrary.org/web/images/logo/databrary-nav.svg" height=150px></p>
 <!-- Photo montage of ROG background -->
-<!-- As brief background, I grew up in Denver, studied cognitive science at Brown, worked in non-profit management in DC before completing my Ph.D. in developmental cognitive neuroscience at Carnegie Mellon. -->
-<!-- That's where I met Karen Adolph. -->
-<!-- I moved to Penn State after finishing my degree. -->
-<!-- I'm an infrastructure guy. -->
-<!-- I founded Penn State's imaging center, and I am the co-founder and co-director of Databrary. -->
 </section><section id="overview" class="slide level2">
 <h2>Overview</h2>
 <ul>
-<li>Why open science matters</li>
-<li>Open by design: The MacWhinney legacy</li>
-<li>Databrary</li>
+<li>The hardest science</li>
+<li>Open by design</li>
+<li>Inspired by this open science pioneer</li>
 </ul>
 </section></section>
-<section><section id="why-science-must-be-open" class="titleslide slide level1"><h1>Why science must be open</h1></section></section>
-<section><section id="psychology-is-the-hardest-science" class="titleslide slide level1"><h1>Psychology is the hardest science</h1></section><section id="harder-than-physics" class="slide level2">
+<section><section id="the-hardest-science" class="titleslide slide level1"><h1>The hardest science</h1></section><section id="psychology-is-the-hardest-science" class="slide level2">
+<h2>Psychology is the hardest science</h2>
+<aside class="notes">
+<p>I claim that psychology is the hardest science.</p>
+</aside>
+</section><section id="harder-than-physics" class="slide level2">
 <h2>(Harder than physics)</h2>
 <aside class="notes">
 <p>Harder than physics. I suspect most of the people in this room agree, but in case there are skeptics, let me try to convince you in two simple figures.</p>
@@ -499,59 +535,232 @@ document.getElementsByTagName('head')[0].appendChild(style);
 
 <p><img src="img/psych-harder-2.jpg" height=500px/></p>
 <!-- What happens now? We don't know. -->
-<aside class="notes">
-<p>What happens now? We don’t have a clue! Even asking the question seems humorous.</p>
-<p>[RIGHT]</p>
-<p>Let’s examine why it’s so hard.</p>
-</aside>
-</section><section id="why-its-so-hard" class="slide level2">
-<h2>Why it’s so hard</h2>
-</section><section class="slide level2">
-
-<div class="centered">
-<p><img src="https://www.nature.com/news/polopoly_fs/7.36716.1469695923!/image/reproducibility-graphic-online1.jpeg_gen/derivatives/landscape_630/reproducibility-graphic-online1.jpeg" height=600px> </br> <small> <a href="http://doi.org/10.1038/533452a">Baker, 2016</a> </small></p>
-</div>
-<aside class="notes">
-
-</aside>
-</section><section class="slide level2">
-
-<div class="centered">
-<p><img src="https://www.nature.com/news/polopoly_fs/7.36718.1464174471!/image/reproducibility-graphic-online3.jpg_gen/derivatives/landscape_630/reproducibility-graphic-online3.jpg" width=700px> </br> <small> <a href="http://doi.org/10.1038/533452a">Baker, 2016</a> </small></p>
-</div>
-<aside class="notes">
-
-</aside>
-</section><section class="slide level2">
-
-<div class="centered">
-<p><img src="https://www.nature.com/news/polopoly_fs/7.36719.1464174488!/image/reproducibility-graphic-online4.jpg_gen/derivatives/landscape_630/reproducibility-graphic-online4.jpg" width=700px> </br> <small> <a href="http://doi.org/10.1038/533452a">Baker, 2016</a> </small></p>
-</div>
-<aside class="notes">
-
-</aside>
-<aside class="notes">
-<p>Look at the fields where the highest levels of failures to replicate are reported: chemistry, biology, physics &amp; engineering, earth and mineral sciences. The so-called ‘hard’ sciences.</p>
-<p>I’m not sure, but I think psychology and the social sciences fall into ‘other’. See, we’re not doing so badly!</p>
-</aside>
-</section><section id="openness-and-transparency-make-it-easier" class="slide level2">
-<h2>Openness and transparency make it easier</h2>
 </section></section>
-<section><section id="open-by-design-the-macwhinney-legacy" class="titleslide slide level1"><h1>Open by design: The MacWhinney legacy</h1></section><section id="the-central-importance-of-data-in-scientific-advance" class="slide level2">
-<h2>The central importance of data in scientific advance</h2>
+<section><section id="open-by-design" class="titleslide slide level1"><h1>Open by design</h1></section><section id="data-are-fundamental" class="slide level2">
+<h2>Data are fundamental</h2>
+</section><section class="slide level2">
+
+<p><img src="https://theintercept.imgix.net/wp-uploads/sites/1/2018/09/American-Dissident-Noam-Chomsky-on-the-State-of-the-Empire-1537928785.jpg?auto=compress%2Cformat&q=90&fit=crop&w=1440&h=720"/></p>
+<p>Noam Chomsky</p>
+<aside class="notes">
+<p>Or the cognitive critique of behaviorism articulated most effectively by Noam Chomsky.</p>
+</aside>
+</section><section class="slide level2">
+
+<ul>
+<li>Can children acquire language from the environment?</li>
+<li>Or do they require rich, prior, innate knowledge about the structure of language?</li>
+</ul>
+</section><section class="slide level2">
+
+<ul>
+<li>What is the child’s language environment?</li>
+</ul>
+</section><section class="slide level2">
+
+<iframe src="https://talkbank.org/" height="600" width="1000">
+</iframe>
+</section><section class="slide level2">
+
+<p><img src="img/geisler-2008.jpg" height=600/></p>
+</section><section class="slide level2">
+
+<p><img src="img/raudies-gilmore.jpg" height=600/></p>
+</section><section class="slide level2">
+
+<video height="320" data-autoplay>
+<source src="https://nyu.databrary.org/slot/7739/0,26134/asset/16749/download?inline=true" type="video/mp4"> Your browser does not support the video tag.
+</video>
+<video height="320" data-autoplay>
+<source src="https://nyu.databrary.org/slot/7739/0,26634/asset/16747/download?inline=true" type="video/mp4"> Your browser does not support the video tag.
+</video>
+<p><small> <a href="http://doi.org/10.17910/B7.116">Gilmore, Raudies, Franchak, &amp; Adolph, 2015</a> </small></p>
+</section><section class="slide level2">
+
+<blockquote>
+<p>“<em>One of the most fundamental questions in psychology concerns the role of experience. What are the essential components of human experience?</em>”</p>
+</blockquote>
+<p><small> <a href="http://www.indiana.edu/~cogdev/homeview.html">The Homeview Project - Smith et al.</a> </small></p>
 </section><section id="data-must-be-openly-shared" class="slide level2">
 <h2>Data must be openly shared</h2>
+</section><section class="slide level2">
+
+<blockquote>
+<p>“<em>Why would I share my data? No one would want to see it.</em>”</p>
+</blockquote>
+<p>A random colleague</p>
+</section><section class="slide level2">
+
+<blockquote>
+<p>“<em>It’s too much work to share.</em>”</p>
+</blockquote>
+<p>Another random colleague</p>
+</section><section class="slide level2">
+
+<blockquote>
+<p>“<em>I don’t want someone to scoop me or do an analysis I plan to do someday.</em>”</p>
+</blockquote>
+<p>More random colleagues than you might imagine</p>
+</section><section class="slide level2">
+
+<iframe src="https://talkbank.org/share/principles.html" height="600" width="1000">
+</iframe>
+<p><small> <a href="https://talkbank.org/share/principles.html" class="uri">https://talkbank.org/share/principles.html</a> </small></p>
+</section><section class="slide level2">
+
+<blockquote>
+<p>“<em>Principles of scientific integrity require that ideas be put to a test. In order to test your ideas about your data, you need to open them up to others who will either support or challenge your ideas.</em>”</p>
+</blockquote>
+<p><small> <a href="https://talkbank.org/share/principles.html" class="uri">https://talkbank.org/share/principles.html</a> </small></p>
+</section><section class="slide level2">
+
+<blockquote>
+<p>“<em>Some types of claims can only be tested against large data sets or against comparisons of somewhat similar data sets. To make these analyses, we often need more and more data.</em>”</p>
+</blockquote>
+<p><small> <a href="https://talkbank.org/share/principles.html" class="uri">https://talkbank.org/share/principles.html</a> </small></p>
+</section><section class="slide level2">
+
+<blockquote>
+<p>“<em>Much of the work in science is conducted using public funds. We have an obligation to the public to make maximally efficient use of these data. For example, the NIH has now issued guidelines on this issue.</em>”</p>
+</blockquote>
+<p><small> <a href="https://talkbank.org/share/principles.html" class="uri">https://talkbank.org/share/principles.html</a> </small></p>
+</section><section class="slide level2">
+
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/RussPoldrack.jpg/330px-RussPoldrack.jpg"/></p>
+<p>Russ Poldrack, founder of <a href="https://openneuro.org/">OpenNeuro</a>, <a href="https://www.cognitiveatlas.org/">The Cognitive Atlas</a></p>
+</section><section class="slide level2">
+
+<blockquote>
+<p>“<em>…the principles of human subject research require an analysis of both risks and benefits…</em>”</p>
+</blockquote>
+<p><small> <a href="http://dx.doi.org/10.1016/j.neuroimage.2013.02.040">Brakewood &amp; Poldack, 2013</a> </small></p>
+</section><section class="slide level2">
+
+<blockquote>
+<p>“<em>…such an analysis suggests that researchers may have a positive duty to share data in order to maximize the contribution that individual participants have made.</em>”</p>
+</blockquote>
+<p><small> <a href="http://dx.doi.org/10.1016/j.neuroimage.2013.02.040">Brakewood &amp; Poldack, 2013</a> </small></p>
+</section><section id="robert-merton" class="slide level2">
+<h2>Robert Merton</h2>
+<p><img src="https://upload.wikimedia.org/wikipedia/en/0/08/Robert_K_Merton.jpg" height=450px/></p>
+</section><section class="slide level2">
+
+<p><img src="https://www.klinebooks.com/pictures/28217.jpg?v=1428617395"/></p>
+</section><section class="slide level2">
+
+<ul>
+<li><strong>universalism</strong>: scientific validity is independent of sociopolitical status/personal attributes of its participants</li>
+<li><strong>communalism</strong>: common ownership of scientific goods (intellectual property)</li>
+</ul>
+</section><section class="slide level2">
+
+<ul>
+<li><strong>disinterestedness</strong>: scientific institutions benefit a common scientific enterprise, not specific individuals</li>
+<li><strong>organized skepticism</strong>: claims should be exposed to critical scrutiny before being accepted</li>
+</ul>
+</section><section class="slide level2">
+
+<p><img src="https://www.psychologicalscience.org/redesign/wp-content/uploads/2017/12/Friday-135x-e1517670488818-609x419.jpg" height=500px/></p>
+<p><small> Walter Mischel </small></p>
+</section><section class="slide level2">
+
+<p><img src="https://www.rd.com/wp-content/uploads/2017/02/01-How-Bad-is-it-to-Share-a-Toothbrush-159311405-ABykov-760x506.jpg" height=600px/></p>
+</section><section class="slide level2">
+
+<blockquote>
+<p>“<em>…psychologists tend to treat other peoples’ theories like toothbrushes; no self-respecting individual wants to use anyone else’s.</em>” <small> <a href="https://www.psychologicalscience.org/observer/becoming-a-cumulative-science">Mischel, 2009</a> </small></p>
+</blockquote>
+</section><section class="slide level2">
+
+<blockquote>
+<p>“<em>The toothbrush culture undermines the building of a genuinely cumulative science, encouraging more parallel play and solo game playing, rather than building on each other’s directly relevant best work.</em>”</p>
+</blockquote>
+<p><small> <a href="https://www.psychologicalscience.org/observer/becoming-a-cumulative-science">Mischel, 2009</a> </small></p>
 </section><section id="data-must-be-organized-and-shared-in-common-formats" class="slide level2">
 <h2>Data must be organized and shared in common formats</h2>
-</section><section id="discovery-requires-software-tools" class="slide level2">
-<h2>Discovery requires software tools</h2>
-</section><section id="nurturing-research-communities" class="slide level2">
-<h2>Nurturing research communities</h2>
+</section><section class="slide level2">
+
+<ul>
+<li>CHAT, extensions for CA, PhonBank, etc…</li>
+</ul>
+</section><section class="slide level2">
+
+<iframe width="888" height="500" src="https://www.youtube.com/embed/66oNv_DJuPc" frameborder="0" allow="accelerometer; data-autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+<!-- <https://www.youtube.com/embed/66oNv_DJuPc> -->
+</section><section class="slide level2">
+
+<p><img src="img/fair-data-principles.jpg"/></p>
+<p><small> <a href="http://dx.doi.org/10.1038/sdata.2016.18">Wilkinson et al., 2016</a> </small></p>
+</section><section class="slide level2">
+
+<p>Data should be…</p>
+<ul>
+<li><strong>F</strong>indable</li>
+<li><strong>A</strong>ccessible</li>
+<li><strong>I</strong>nteroperable</li>
+<li><strong>R</strong>eusable</li>
+</ul>
+</section><section id="discovery-requires-powerful-tools" class="slide level2">
+<h2>Discovery requires powerful tools</h2>
+</section><section id="and-tool-building-represents-an-invaluable-important-and-high-impace-scholarly-contribution" class="slide level2">
+<h2>(and tool-building represents an invaluable, important, and high-impace scholarly contribution)</h2>
+</section><section class="slide level2">
+
+<iframe src="http://dali.talkbank.org/clan/" height="600" width="1000">
+</iframe>
+</section><section class="slide level2">
+
+<p><img src="img/talkbank-cites.jpg"/></p>
+<p><img src="img/childes-cites.jpg"/></p>
+</section><section id="data-tools-can-energize-and-help-build-research-communities" class="slide level2">
+<h2>Data + tools can energize and help build research communities</h2>
+</section><section class="slide level2">
+
+<iframe src="http://childes-db.stanford.edu/" width="1000" height="600">
+</iframe>
+<p><small> <a href="http://childes-db.stanford.edu/" class="uri">http://childes-db.stanford.edu/</a> </small></p>
+</section><section class="slide level2">
+
+<!-- <iframe src="https://sla.talkbank.org/TalkBankDB/" width=1000 height=600> -->
+<!-- </iframe> -->
+<p><img src="img/talkbank-db.jpg"></p>
+<p><small> <a href="https://sla.talkbank.org/TalkBankDB/" class="uri">https://sla.talkbank.org/TalkBankDB/</a> </small></p>
+</section><section class="slide level2">
+
+<ul>
+<li>child language</li>
+<li>aphasia, dementia, ASD, RHD, TBI</li>
+<li>bi/multilingualism</li>
+<li>phonology, syntax, semantics, behavior</li>
+<li>audio, video, transcripts</li>
+</ul>
 </section></section>
-<section><section id="inspired-by-brian" class="titleslide slide level1"><h1>Inspired by Brian</h1></section><section id="databrary" class="slide level2">
-<h2>Databrary</h2>
-</section><section id="play-learning-across-a-year-play" class="slide level2">
-<h2>Play &amp; Learning Across a Year (PLAY)</h2>
+<section><section id="inspirations" class="titleslide slide level1"><h1>Inspirations</h1></section><section class="slide level2">
+
+<video width="800" data-autoplay>
+<source src="https://github.com/gilmore-lab/DEVSEC-2018/blob/master/mov/databrary-splash.mp4?raw=true" type="video/mp4">
+</video>
+</section><section class="slide level2">
+
+<ul>
+<li>Share video, audio, *.cha, .csv, etc.</li>
+<li>Access restricted to institutionally authorized researchers</li>
+<li>Citation required, but no pre-approval of research questions</li>
+</ul>
+</section><section class="slide level2">
+
+<p><img src="img/datavyu.jpg"/></p>
+</section><section class="slide level2">
+
+<p></br> <video width="800" height="600" controls> <source src="http://datavyu.org/user-guide/_static/video/coding-example.mp4" type="video/mp4"> </video> </br></p>
+<p><small> <a href="http://datavyu.org/user-guide/walkthrough-videos.html" class="uri">http://datavyu.org/user-guide/walkthrough-videos.html</a> </small></p>
+</section><section class="slide level2">
+
+<iframe src="http://datavyu.org/user-guide/best-practices.html" height=600 width=1000/>
+<p><small> <a href="http://datavyu.org/user-guide/best-practices.html" class="uri">http://datavyu.org/user-guide/best-practices.html</a> </small></p>
+</section><section id="play-learning-across-a-year-play-project" class="slide level2">
+<h2>Play &amp; Learning Across a Year (PLAY) project</h2>
 <ul>
 <li>What do mothers and infants actually <em>DO</em></li>
 </ul>
@@ -574,17 +783,59 @@ document.getElementsByTagName('head')[0].appendChild(style);
 
 <iframe src="https://play-project.org/" height="600" width="1000">
 </iframe>
-<aside class="notes">
-<p>The entire PLAY project protocol, including videos of procedures, coding definitions, survey items, etc. is openly shared.</p>
-</aside>
-</section></section>
-<section><section id="thank-you" class="titleslide slide level1"><h1>Thank you</h1></section><section class="slide level2">
-
-<p><img src="https://nyu.databrary.org/web/images/logo/databrary-nav.svg" height=250px></p>
 </section><section class="slide level2">
 
-<p><a href="mailto:rogilmore@psu.edu">rogilmore@psu.edu</a></br></p>
-<p><a href="https://gilmore-lab.github.io/2019-06-MacWhinney-Symposium/databrary-workshop/" class="uri">https://gilmore-lab.github.io/2019-06-MacWhinney-Symposium/databrary-workshop/</a></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">databraryapi<span class="op">::</span><span class="kw">read_csv_data_as_df</span>() <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">ggplot</span>(.) <span class="op">+</span>
+<span class="st">  </span><span class="kw">aes</span>(Auth_Investigators, Institutions) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>()</code></pre></div>
+<p><img src="index_files/figure-revealjs/databrary-growth-plot-1.png" width="768" /></p>
+<p><a href="http://github.com/PLAY-behaviorome/databraryapi" class="uri">http://github.com/PLAY-behaviorome/databraryapi</a></p>
+</section><section class="slide level2">
+
+<p><img src="https://www.brainyquote.com/photos_tr/en/h/harrystruman/109615/harrystruman1-2x.jpg"/></p>
+</section><section class="slide level2">
+
+<video width="800" data-autoplay>
+<source src="https://github.com/gilmore-lab/DEVSEC-2018/blob/master/mov/databrary-splash.mp4?raw=true" type="video/mp4">
+</video>
+<p><small> <a href="mailto:rogilmore@psu.edu">rogilmore@psu.edu</a></br> <a href="https://gilmore-lab.github.io" class="uri">https://gilmore-lab.github.io</a></br> <a href="https://gilmore-lab.github.io/2019-06-MacWhinney-Symposium/databrary-workshop/tribute-to-brian/" class="uri">https://gilmore-lab.github.io/2019-06-MacWhinney-Symposium/databrary-workshop/tribute-to-brian/</a></br> <a href="https://twitter.com/rogilmore">@rogilmore</a> </small></p>
+</section><section class="slide level2">
+
+<p><small> This talk was produced on 2019-06-06 in <a href="http://rstudio.com">RStudio</a> version using R Markdown and the reveal.JS framework. The code and materials used to generate the slides may be found at <a href="https://github.com/gilmore-lab/2019-06-MacWhinney-Symposium/tribute-to-brian/" class="uri">https://github.com/gilmore-lab/2019-06-MacWhinney-Symposium/tribute-to-brian/</a>. Information about the R Session that produced the code is as follows:</p>
+</section><section class="slide level2">
+
+<pre><code>## R version 3.5.2 (2018-12-20)
+## Platform: x86_64-apple-darwin15.6.0 (64-bit)
+## Running under: macOS Mojave 10.14.5
+## 
+## Matrix products: default
+## BLAS: /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib
+## LAPACK: /Library/Frameworks/R.framework/Versions/3.5/Resources/lib/libRlapack.dylib
+## 
+## locale:
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+## [1] qrcode_0.1.1
+## 
+## loaded via a namespace (and not attached):
+##  [1] Rcpp_1.0.1              codetools_0.2-15       
+##  [3] revealjs_0.9            assertthat_0.2.1       
+##  [5] digest_0.6.18           R.methodsS3_1.7.1      
+##  [7] R6_2.4.0                magrittr_1.5           
+##  [9] evaluate_0.13           httr_1.4.0             
+## [11] stringi_1.4.3           curl_3.3               
+## [13] R.oo_1.22.0             R.utils_2.8.0          
+## [15] keyring_1.1.0           databraryapi_0.1.6.9001
+## [17] rmarkdown_1.12          tools_3.5.2            
+## [19] stringr_1.4.0           xfun_0.6               
+## [21] yaml_2.2.0              compiler_3.5.2         
+## [23] htmltools_0.3.6         knitr_1.22</code></pre>
+<p></small></p>
 </section></section>
     </div>
   </div>
