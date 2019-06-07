@@ -1,6 +1,6 @@
 ---
 title: "Open by Design"
-author: Rick O. Gilmore & Karen E. Adolph
+author: Rick Gilmore & Karen Adolph
 date: "`r Sys.time()`"
 bib: references.bib
 output:
@@ -308,7 +308,7 @@ Your browser does not support the video tag.
 ---
 
 ```{r, results='asis', echo=FALSE}
-write_video_clip_html("https://nyu.databrary.org/slot/11636/8167736,8217311/asset/40375/download?inline=true", vid_h_pix = 550, show_link = FALSE)
+write_video_clip_html("https://nyu.databrary.org/slot/11636/8167736,8217311/asset/40375/download?inline=true", show_link = FALSE)
 ```
 
 <small>
