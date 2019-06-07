@@ -47,12 +47,18 @@ talk_url <- 'https://gilmore-lab.github.io/2019-06-MacWhinney-Symposium/datatrib
 qrcode::qrcode_gen(talk_url)
 ```
 
+---
+
+<img src="http://chickensintheroad.com/wp-content/uploads/2016/03/IMG_7734.jpg" height=500px/>
+
+<!-- Goats with bells on -->
+
 # Preliminaries
 
 ---
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/NSF_Logo.PNG" height=150px>
-<img src="https://science.nichd.nih.gov/confluence/download/attachments/34472103/NICHD-vertical-2-color.png?version=1&modificationDate=1477410070000&api=v2" height=150px>
+<img src="https://pbs.twimg.com/profile_images/826768222363975680/8hO9VaFD.jpg" height=150px>
 </br>
 <img src="https://sloan.org/storage/app/media/Logos/Sloan-Logo-stacked-black-web.png" height=150px>
 <img src="http://newsroom.unl.edu/announce/files/file77330.jpg" height=150px/>
@@ -60,6 +66,7 @@ qrcode::qrcode_gen(talk_url)
 </br>
 <img src="https://nationalpress.org/wp-content/uploads/2016/04/NIDA-logo-300x300.jpg" height=150px/>
 <img src="http://bewellva.com/wp-content/uploads/2017/12/NIMH-Logo_14-e1510955490255.jpg" height=150px/>
+<img src="https://www.jsmf.org/assets/logo-small.png" height=150px/>
 
 <!-- Funding sources with icons -->
 
@@ -79,7 +86,7 @@ qrcode::qrcode_gen(talk_url)
 
 - The hardest science
 - Open by design
-- Inspired by this open science pioneer
+- Inspired by Brian
 
 # The hardest science
 
@@ -115,6 +122,117 @@ Yes, but if we change one element in this equation, the problem becomes immensel
 <img src="img/psych-harder-2.jpg" height=500px/>
 
 <!-- What happens now? We don't know. -->
+
+## Why is it so hard?
+
+---
+
+<img src="img/nested-causality-labels.png" height=600px/>
+
+<!-- Perhaps less widely appreciated, the phenomena we study have a nested structure. -->
+
+<div class="notes">
+Relatedly, but perhaps less widely appreciated, the phenomena we study have a complex nested structure.
+
+I designed this logo for my lab group to remind me of it.
+
+The science of the mind and behavior collects and integrates evidence from at least four logically separable but mutually embedded realms.
+</div>
+
+---
+
+- Body ($B$) within world ($W$)
+- Nervous system ($N$) within body ($B$)
+- Mind ($M$) within nervous system ($N$)
+
+<div class="notes">
+
+Our bodies are embedded in a world.
+Our nervous systems with our bodies.
+And our mind within the nervous system.
+</div>
+
+---
+
+$\dot{M} = f(M,N)$
+
+$\dot{N} = f(N,B)$
+
+$\dot{B} = f(B,N,W)$
+
+$\dot{W} = f(W,B)$
+
+<div class="notes">
+And using the mathematical language of dynamical systems, we can say that these realms are mutually coupled to one another: Changes in the mind are a function of mental and nervous system states, and so forth...
+
+And make no mistake: The mind, brain, and body are non-linear dynamical systems, whether or not we study them that way.
+
+Dynamical systems involve rule-based changes in state variables.
+</div>
+
+---
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+el <- rbind(c("W","B"), c("B","N"), c("N","M"), c("M","N"), c("N","B"), c("B", "W"))
+g <- igraph::graph_from_edgelist(el)
+g$layout <- igraph::layout_in_circle
+plot(g, vertex.size=80, vertex.color="gray", edge.color = "blue")
+```
+
+<div class="notes">
+The reality is that responses affect the world, responses and world states evoke stimuli, stimuli affects cognition, cognition affects responses, and the cycle repeats.
+
+Non-linear, closed-loop dynamical systems like this require broader and denser data about all of the realms in order to reveal the underlying processes.
+Data that can be difficult or expensive to collect.
+
+But even in situations when the data are available, when all of these states are well-known, our current methods have some striking limitations.
+</div>
+
+---
+
+<a href="">
+<img src="https://media.nature.com/lw926/nature-assets/neuro/journal/v17/n11/images/nn.3839-F1.jpg" height=500px/>
+</a>
+
+<small>
+[Sejnowski, Churchland, & Movshon, 2014](http://doi.org/10.1038/nn.3839)
+</small>
+
+<div class="notes">
+</div>
+
+---
+
+<p><a href="https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_(Vienna)_-_Google_Art_Project.jpg#/media/File:Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_(Vienna)_-_Google_Art_Project.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29_-_Google_Art_Project.jpg/1200px-Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29_-_Google_Art_Project.jpg" alt="Pieter Bruegel the Elder - The Tower of Babel (Vienna) - Google Art Project.jpg" height=500px></a>
+</p>
+
+<!-- And like the builders of the Tower of Babel after suffering God's wrath, we often struggle to communicate with one another about essential ideas. -->
+
+<div class="notes">
+This painting of the Tower of Babel should remind all of us often we're  like the builders after suffering God's wrath: Too often we struggle to communicate with one another about essential concepts and ideas from our distinct subfields.
+
+For example, William James may have said that 'everyone knows what attention is', but I'm not sure we agree.
+</div>
+
+---
+
+<img src="http://cdn2.hubspot.net/hub/134568/file-1208368053-jpg/6-blind-men-hans.jpg" height=550px>
+
+<!-- The whole elephant -->
+
+<div class="notes">
+This figure depicts the classic Hindu myth of the blind men examining an elephant. 
+To me, it also reflects the state of psychological science.
+
+We're all studying the elephant, or so we say, but we might easily mistake the trunk for a spear, or the tail for a rope, and so forth.
+
+I want to see the whole elephant!
+Don't you?
+</div>
+
+## What do to about it?
+
+## Follow a leader
 
 # Open by design
 
@@ -176,6 +294,24 @@ Your browser does not support the video tag.
 [The Homeview Project - Smith et al.](http://www.indiana.edu/~cogdev/homeview.html)
 </small>
 
+---
+
+<img src="img/homeview-project.jpg" height=250px>
+
+- 500+ hours of head camera video
+- 91 infants (46 female, 45 male) 1-24 mos (US)
+- 40 (24 female, 16 male) 1 to 15 (India)
+
+---
+
+```{r, results='asis', echo=FALSE}
+write_video_clip_html("https://nyu.databrary.org/slot/11636/8167736,8217311/asset/40375/download?inline=true", vid_w_pix = 800, vid_h_pix = 600, show_link = FALSE)
+```
+
+<small>
+[Jayaraman, Smith, Raudies, & Gilmore, 2014](http://doi.org/10.17910/B7988V)
+</small>
+
 ## Data must be openly shared
 
 ---
@@ -228,8 +364,6 @@ More random colleagues than you might imagine
 <small>
 <https://talkbank.org/share/principles.html>
 </small>
-
----
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/RussPoldrack.jpg/330px-RussPoldrack.jpg"/>
 
@@ -284,6 +418,7 @@ Walter Mischel
 ---
 
 > "*...psychologists tend to treat other peoples’ theories like toothbrushes; no self-respecting individual wants to use anyone else’s.*"
+
 <small>
 [Mischel, 2009](https://www.psychologicalscience.org/observer/becoming-a-cumulative-science)
 </small>
@@ -328,7 +463,7 @@ Data should be...
 
 ## Discovery requires powerful tools
 
-## (and tool-building represents an invaluable, important, and high-impace scholarly contribution)
+## (and tool-building represents an invaluable and high-impact scholarly contribution)
 
 ---
 
@@ -370,7 +505,7 @@ Data should be...
 - phonology, syntax, semantics, behavior
 - audio, video, transcripts
 
-# Inspirations
+# Inspired by Brian
 
 ---
 
@@ -380,9 +515,24 @@ Data should be...
 
 ---
 
-- Share video, audio, *.cha, .csv, etc.
+- Share video, audio, \*.cha, \*.csv, etc.
 - Access restricted to institutionally authorized researchers
-- Citation required, but no pre-approval of research questions
+- Citation required, but not pre-approval of research questions
+
+---
+
+```{r databrary-growth-plot, echo=TRUE}
+databraryapi::read_csv_data_as_df() %>%
+  ggplot(.) +
+  aes(Auth_Investigators, Institutions) +
+  geom_point()
+```
+
+<small>
+<https://github.com/PLAY-behaviorome/databraryapi>
+
+<https://github.com/PLAY-behaviorome/databrarypi>
+</small>
 
 ---
 
@@ -405,6 +555,12 @@ write_video_clip_html("http://datavyu.org/user-guide/_static/video/coding-exampl
 <small>
 <http://datavyu.org/user-guide/best-practices.html>
 </small>
+
+---
+
+- scriptable
+- optimized for efficient coding of **ANY** behavior
+- convertible to/from CHAT
 
 ## Play & Learning Across a Year (PLAY) project
 
@@ -433,23 +589,56 @@ We're also creating a large-scale, diverse and rich data set for others to explo
 
 ---
 
-<iframe src="https://play-project.org/" height=600 width=1000>
-</iframe>
+<img src="http://cdn2.hubspot.net/hub/134568/file-1208368053-jpg/6-blind-men-hans.jpg" height=550px>
+
+<!-- The whole elephant -->
 
 ---
 
-```{r databrary-growth-plot, echo=TRUE}
-databraryapi::read_csv_data_as_df() %>%
-  ggplot(.) +
-  aes(Auth_Investigators, Institutions) +
-  geom_point()
-```
+<p><a href="https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_(Vienna)_-_Google_Art_Project.jpg#/media/File:Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_(Vienna)_-_Google_Art_Project.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29_-_Google_Art_Project.jpg/1200px-Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29_-_Google_Art_Project.jpg" alt="Pieter Bruegel the Elder - The Tower of Babel (Vienna) - Google Art Project.jpg" height=500px></a>
+</p>
 
-<http://github.com/PLAY-behaviorome/databraryapi>
+## Brian says:
+
+---
+
+- Ontologies are essential
+
+## Karen, Cathie, & Rick say:
+
+---
+
+>- You're right, Brian. (Of course)
+>- We just don't know what they should be.
+
+---
+
+<iframe src="https://play-project.org/" height=600 width=1000>
+</iframe>
+
+## Why not BehaviorBank or WalkBank?
+
+- Following your lead
+- Putting the pieces together
+
+---
+
+<div class="centered">
+<img src="http://static.neatorama.com/images/2012-09/girl-hugging-elephant.jpg" height=600px>
+
+# ...before it was cool
+
+---
+
+<img src="https://www.um.edu.mt/__data/assets/image/0005/314807/openscience1.jpg" height=550px/>
+
+<!-- Open science word cloud -->
 
 ---
 
 <img src="https://www.brainyquote.com/photos_tr/en/h/harrystruman/109615/harrystruman1-2x.jpg"/>
+
+## Thank you, Brian!
 
 ---
 
