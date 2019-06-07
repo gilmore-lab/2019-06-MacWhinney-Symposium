@@ -107,10 +107,6 @@ I suspect most of the people in this room agree, but in case there are skeptics,
 
 <img src="img/psych-harder-1.jpg" height=500px/>
 
-<!-- First year physical science students often face problems like this. Given a mass M, an inclined plane with specified geometry, and a gravitational field, we can predict the future with high precision. What's going to happen next? -->
-
-<!-- Yes, but if we change one element in this equation, the problem becomes immensely harder. What if we change the mass to a mouse? -->
-
 <div class="notes">
 First year physical science students often face problems like this. Given a mass M, an inclined plane with specified geometry, and a gravitational field, we can predict the future with high precision. What's going to happen next?
 
@@ -154,13 +150,13 @@ And our mind within the nervous system.
 
 ---
 
-$\dot{M} = f(M,N)$
+$\dot{M} = f_{M}(M,N)$
 
-$\dot{N} = f(N,B)$
+$\dot{N} = f_{N}(N,B)$
 
-$\dot{B} = f(B,N,W)$
+$\dot{B} = f_B(B,N,W)$
 
-$\dot{W} = f(W,B)$
+$\dot{W} = f_W(W,B)$
 
 <div class="notes">
 And using the mathematical language of dynamical systems, we can say that these realms are mutually coupled to one another: Changes in the mind are a function of mental and nervous system states, and so forth...
@@ -236,7 +232,9 @@ Don't you?
 
 # Open by design
 
-## Data are fundamental
+## The language sciences are far ahead of many fields in addressing the problems required to understand language behavior
+
+## Theory is important...
 
 ---
 
@@ -248,6 +246,8 @@ Noam Chomsky
 Or the cognitive critique of behaviorism articulated most effectively by Noam Chomsky.
 </div>
 
+## But data are fundamental
+
 ---
 
 - Can children acquire language from the environment?
@@ -255,7 +255,9 @@ Or the cognitive critique of behaviorism articulated most effectively by Noam Ch
 
 ---
 
-- What is the child's language environment?
+- What is the child's language environment ($W$)?
+- How does $W$ shape changes in behavior $\dot{B}$
+- and by extension, the brain $N$, and the mind $M$?
 
 ---
 
@@ -265,10 +267,6 @@ Or the cognitive critique of behaviorism articulated most effectively by Noam Ch
 ---
 
 <img src="img/geisler-2008.jpg" height=600/>
-
----
-
-<img src="img/raudies-gilmore.jpg" height=600/>
 
 ---
 
@@ -285,6 +283,11 @@ Your browser does not support the video tag.
 <small>
 [Gilmore, Raudies, Franchak, & Adolph, 2015](http://doi.org/10.17910/B7.116)
 </small>
+
+---
+
+<img src="img/raudies-gilmore.jpg" height=600/>
+
 
 ---
 
@@ -305,7 +308,7 @@ Your browser does not support the video tag.
 ---
 
 ```{r, results='asis', echo=FALSE}
-write_video_clip_html("https://nyu.databrary.org/slot/11636/8167736,8217311/asset/40375/download?inline=true", vid_w_pix = 800, vid_h_pix = 600, show_link = FALSE)
+write_video_clip_html("https://nyu.databrary.org/slot/11636/8167736,8217311/asset/40375/download?inline=true", vid_h_pix = 550, show_link = FALSE)
 ```
 
 <small>
@@ -316,7 +319,7 @@ write_video_clip_html("https://nyu.databrary.org/slot/11636/8167736,8217311/asse
 
 ---
 
->"*Why would I share my data? No one would want to see it.*"
+>"*Why would I share my data? No one else would want to see it.*"
 
 A random colleague
 
@@ -359,11 +362,13 @@ More random colleagues than you might imagine
 
 ---
 
->"*Much of the work in science is conducted using public funds. We have an obligation to the public to make maximally efficient use of these data. For example, the NIH has now issued guidelines on this issue.*"
+>"*Much of the work in science is conducted using public funds. We have an obligation to the public to make maximally efficient use of these data.*"
 
 <small>
 <https://talkbank.org/share/principles.html>
 </small>
+
+---
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/RussPoldrack.jpg/330px-RussPoldrack.jpg"/>
 
@@ -435,7 +440,20 @@ Walter Mischel
 
 ---
 
-- CHAT, extensions for CA, PhonBank, etc...
+```
+12    @Date:	21-JAN-2003
+13    *MOT:	alright , sit over here . 
+14    %mor:	co|alright cm|cm v|sit prep|over pro:dem|here .
+15    %gra:	1|3|COM 2|1|LP 3|0|ROOT 4|3|JCT 5|4|POBJ 6|3|PUNCT
+16    *MOT:	sit near me and I'll help you build it . 
+17    %mor:	v|sit prep|near pro:obj|me conj|and pro:sub|I~mod|will v|help
+18    	pro|you v|build pro|it .
+19    %gra:	1|0|ROOT 2|1|JCT 3|2|POBJ 4|7|LINK 5|7|SUBJ 6|7|AUX 7|1|CJCT 8|9|SUBJ
+```  
+
+---
+
+- extensions for CA, PhonBank, etc...
 
 ---
 
@@ -461,9 +479,12 @@ Data should be...
 - **I**nteroperable
 - **R**eusable
 
-## Discovery requires powerful tools
+## Blessed are the toolmakers
 
-## (and tool-building represents an invaluable and high-impact scholarly contribution)
+---
+
+- tool-building is invaluable
+- tool-building represents a high-impact contribution to scholarship
 
 ---
 
@@ -476,7 +497,7 @@ Data should be...
 
 <img src="img/childes-cites.jpg"/>
 
-## Data + tools can energize and help build research communities
+## Data + tools can energize research communities
 
 ---
 
@@ -505,6 +526,8 @@ Data should be...
 - phonology, syntax, semantics, behavior
 - audio, video, transcripts
 
+## Behavior in its natural contexts and in its full complexity can be studied productively
+
 # Inspired by Brian
 
 ---
@@ -512,12 +535,25 @@ Data should be...
 <video width="800" data-autoplay>
   <source src="https://github.com/gilmore-lab/DEVSEC-2018/blob/master/mov/databrary-splash.mp4?raw=true" type="video/mp4">
   </video>
-
+  
 ---
 
 - Share video, audio, \*.cha, \*.csv, etc.
 - Access restricted to institutionally authorized researchers
 - Citation required, but not pre-approval of research questions
+
+## Video...
+
+- Captures (& preserves)
+- Shows (& helps tell...)
+- Expands the scope of inquiry (e.g., words +)
+- Provides unparalleled opportunities for reuse
+
+<div class="notes">
+Video captures and preserves aspects of behavior that other measures often neglect; it shows what participants do and helps tell the story; it expands the scope of inquiry to include other behaviors; and it provides unparalleled opportunities for reuse.
+
+Video also has unique strengths as research documentation.
+</div>
 
 ---
 
@@ -582,7 +618,7 @@ We're also creating a large-scale, diverse and rich data set for others to explo
 
 ---
 
-- $n=900$ infant/mother dyads, $n=300$ 12-, 18-, and 24-month-olds
+- ~$n=1,000$ infant/mother dyads, $n=300$ 12-, 18-, and 24-month-olds
 - Demographics, health status, media use, temperament
 - Modified MB-CDI (interview, video-recorded, English/Spanish item-level equivalents)
 - Open protocol, video documentation
@@ -616,10 +652,11 @@ We're also creating a large-scale, diverse and rich data set for others to explo
 <iframe src="https://play-project.org/" height=600 width=1000>
 </iframe>
 
-## Why not BehaviorBank or WalkBank?
+## Why not BehaviorBank or WalkBank or ...?
 
-- Following your lead
-- Putting the pieces together
+- Following your (collective) lead
+- Putting all the pieces together
+- Speech + gesture + emotion + locomotion + object interaction + ...
 
 ---
 
