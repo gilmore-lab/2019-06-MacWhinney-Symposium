@@ -26,6 +26,12 @@ This document describes how to run the demos John presented.
 
 TalkBankDB may be accessed here: <https://sla.talkbank.org/TalkBankDB/>
 
+"Source" the functions to run the demo:
+
+```{r}
+source("R/demo.R")
+```
+
 # Load data from TalkBank
 
 This takes a few moments, so be patient.
